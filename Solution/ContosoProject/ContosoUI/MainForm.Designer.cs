@@ -225,6 +225,7 @@ namespace ContosoUI
             // 
             this.xtraTabbedMdiManager.HeaderButtonsShowMode = DevExpress.XtraTab.TabButtonShowMode.WhenNeeded;
             this.xtraTabbedMdiManager.MdiParent = this;
+            this.xtraTabbedMdiManager.PageAdded += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager_PageAdded);
             this.xtraTabbedMdiManager.PageRemoved += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager_PageRemoved);
             // 
             // pictureEdit1
@@ -256,7 +257,6 @@ namespace ContosoUI
             this.Name = "MainForm";
             this.Ribbon = this.mainRibbon;
             this.Text = "CHAIRS";
-            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MdiChildActivate += new System.EventHandler(this.MainForm_MdiChildActivate);
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).EndInit();
