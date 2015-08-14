@@ -123,8 +123,12 @@ namespace ContosoUI.ProductForm
 
         public void New()
         {
-            _product = new Product();
-            InitializeProductFields();
+            SKU = null;
+            Title = null;
+            Quantity = 0;
+            Price = 0;
+            ProductComments = new BindingList<Comment>();
+            SearchTitleCategory = string.Empty;
         }
 
         public void Search()
