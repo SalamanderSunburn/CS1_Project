@@ -33,24 +33,24 @@ namespace ContosoUI
 
         private void FillControls()
         {
-            firstNameTextBox.Text = _client.Person.FirstName;
-            middleNameTextBox.Text = _client.Person.MiddleName;
-            lastNameTextBox.Text = _client.Person.LastName;
-            cityTextBox.Text = _client.ClientLocation.City;
+            firstNameTextEdit.Text = _client.Person.FirstName;
+            middleNameTextEdit.Text = _client.Person.MiddleName;
+            lastNameTextEdit.Text = _client.Person.LastName;
+            cityTextEdit.Text = _client.ClientLocation.City;
             adressRichTextBox.AppendText(_client.ClientLocation.Adress);
             foreach (var telephone in _client.Telephones)
             {
                 telephonesRichTextBox.AppendText(telephone);
             }
-            ordersGridView.DataSource = _orders.GetByClient(_client);
+            ordersGridControl.DataSource = _orders.GetByClient(_client);
             //here's will be getting comments for this client and adding it to richtextbox
-            isActiveCheckBox.Checked = _client.IsActive;
+            isActiveCheckEdit.Checked = _client.IsActive;
         }
 
         private void addCommentButton_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(newCommentTextBox.Text))
-            _comments.Create(new Comment() { Date = DateTime.Now, EntityType = EntityType.Client, Id = GENERATED_ID, IsActive = true, Text = newCommentTextBox.Text, User = null});
+            if(!String.IsNullOrEmpty(newCommentTextEdit.Text))
+            _comments.Create(new Comment() { Date = DateTime.Now, EntityType = EntityType.Client, Id = GENERATED_ID, IsActive = true, Text = newCommentTextEdit.Text, User = null});
         }
 
         private void saveButton_Click(object sender, EventArgs e)

@@ -36,22 +36,33 @@
             this.telephonesLabel = new System.Windows.Forms.Label();
             this.commentsLabel = new System.Windows.Forms.Label();
             this.ordersLabel = new System.Windows.Forms.Label();
-            this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.middleNameTextBox = new System.Windows.Forms.TextBox();
-            this.lastNameTextBox = new System.Windows.Forms.TextBox();
-            this.cityTextBox = new System.Windows.Forms.TextBox();
-            this.newCommentTextBox = new System.Windows.Forms.TextBox();
             this.adressRichTextBox = new System.Windows.Forms.RichTextBox();
             this.telephonesRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.ordersGridView = new System.Windows.Forms.DataGridView();
-            this.isActiveCheckBox = new System.Windows.Forms.CheckBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.commentsRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.addCommentButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.saveCloseButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).BeginInit();
+            this.ordersGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.saveButton = new DevExpress.XtraEditors.SimpleButton();
+            this.saveCloseButton = new DevExpress.XtraEditors.SimpleButton();
+            this.closeButton = new DevExpress.XtraEditors.SimpleButton();
+            this.isActiveCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.newCommentTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.addCommentButton = new DevExpress.XtraEditors.SimpleButton();
+            this.firstNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.middleNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.lastNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.cityTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.orderNumberGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.statusGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dateGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.isActiveCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCommentTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -66,7 +77,7 @@
             // middleNameLabel
             // 
             this.middleNameLabel.AutoSize = true;
-            this.middleNameLabel.Location = new System.Drawing.Point(278, 12);
+            this.middleNameLabel.Location = new System.Drawing.Point(326, 12);
             this.middleNameLabel.Name = "middleNameLabel";
             this.middleNameLabel.Size = new System.Drawing.Size(67, 13);
             this.middleNameLabel.TabIndex = 1;
@@ -75,7 +86,7 @@
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(538, 12);
+            this.lastNameLabel.Location = new System.Drawing.Point(635, 12);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(56, 13);
             this.lastNameLabel.TabIndex = 2;
@@ -93,7 +104,7 @@
             // adressLabel
             // 
             this.adressLabel.AutoSize = true;
-            this.adressLabel.Location = new System.Drawing.Point(278, 87);
+            this.adressLabel.Location = new System.Drawing.Point(326, 87);
             this.adressLabel.Name = "adressLabel";
             this.adressLabel.Size = new System.Drawing.Size(39, 13);
             this.adressLabel.TabIndex = 4;
@@ -102,7 +113,7 @@
             // telephonesLabel
             // 
             this.telephonesLabel.AutoSize = true;
-            this.telephonesLabel.Location = new System.Drawing.Point(538, 87);
+            this.telephonesLabel.Location = new System.Drawing.Point(635, 87);
             this.telephonesLabel.Name = "telephonesLabel";
             this.telephonesLabel.Size = new System.Drawing.Size(63, 13);
             this.telephonesLabel.TabIndex = 5;
@@ -111,7 +122,7 @@
             // commentsLabel
             // 
             this.commentsLabel.AutoSize = true;
-            this.commentsLabel.Location = new System.Drawing.Point(427, 213);
+            this.commentsLabel.Location = new System.Drawing.Point(504, 213);
             this.commentsLabel.Name = "commentsLabel";
             this.commentsLabel.Size = new System.Drawing.Size(56, 13);
             this.commentsLabel.TabIndex = 6;
@@ -126,154 +137,176 @@
             this.ordersLabel.TabIndex = 7;
             this.ordersLabel.Text = "Orders";
             // 
-            // firstNameTextBox
-            // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(31, 40);
-            this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(192, 20);
-            this.firstNameTextBox.TabIndex = 8;
-            // 
-            // middleNameTextBox
-            // 
-            this.middleNameTextBox.Location = new System.Drawing.Point(281, 37);
-            this.middleNameTextBox.Name = "middleNameTextBox";
-            this.middleNameTextBox.Size = new System.Drawing.Size(192, 20);
-            this.middleNameTextBox.TabIndex = 9;
-            // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(541, 37);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(192, 20);
-            this.lastNameTextBox.TabIndex = 10;
-            // 
-            // cityTextBox
-            // 
-            this.cityTextBox.Location = new System.Drawing.Point(31, 115);
-            this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(192, 20);
-            this.cityTextBox.TabIndex = 11;
-            // 
-            // newCommentTextBox
-            // 
-            this.newCommentTextBox.Location = new System.Drawing.Point(430, 347);
-            this.newCommentTextBox.Multiline = true;
-            this.newCommentTextBox.Name = "newCommentTextBox";
-            this.newCommentTextBox.Size = new System.Drawing.Size(271, 23);
-            this.newCommentTextBox.TabIndex = 12;
-            // 
             // adressRichTextBox
             // 
-            this.adressRichTextBox.Location = new System.Drawing.Point(281, 115);
+            this.adressRichTextBox.Location = new System.Drawing.Point(329, 115);
             this.adressRichTextBox.Name = "adressRichTextBox";
             this.adressRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.adressRichTextBox.Size = new System.Drawing.Size(191, 82);
+            this.adressRichTextBox.Size = new System.Drawing.Size(230, 82);
             this.adressRichTextBox.TabIndex = 13;
             this.adressRichTextBox.Text = "";
             // 
             // telephonesRichTextBox
             // 
-            this.telephonesRichTextBox.Location = new System.Drawing.Point(541, 115);
+            this.telephonesRichTextBox.Location = new System.Drawing.Point(638, 115);
             this.telephonesRichTextBox.Name = "telephonesRichTextBox";
             this.telephonesRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.telephonesRichTextBox.Size = new System.Drawing.Size(191, 82);
+            this.telephonesRichTextBox.Size = new System.Drawing.Size(234, 82);
             this.telephonesRichTextBox.TabIndex = 14;
             this.telephonesRichTextBox.Text = "";
             // 
-            // ordersGridView
-            // 
-            this.ordersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ordersGridView.Location = new System.Drawing.Point(31, 239);
-            this.ordersGridView.Name = "ordersGridView";
-            this.ordersGridView.Size = new System.Drawing.Size(362, 131);
-            this.ordersGridView.TabIndex = 15;
-            // 
-            // isActiveCheckBox
-            // 
-            this.isActiveCheckBox.AutoSize = true;
-            this.isActiveCheckBox.Location = new System.Drawing.Point(32, 408);
-            this.isActiveCheckBox.Name = "isActiveCheckBox";
-            this.isActiveCheckBox.Size = new System.Drawing.Size(56, 17);
-            this.isActiveCheckBox.TabIndex = 16;
-            this.isActiveCheckBox.Text = "Active";
-            this.isActiveCheckBox.UseVisualStyleBackColor = true;
-            // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 443);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(843, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(904, 22);
             this.statusStrip1.TabIndex = 17;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // commentsRichTextBox
             // 
-            this.commentsRichTextBox.Location = new System.Drawing.Point(430, 239);
+            this.commentsRichTextBox.Location = new System.Drawing.Point(507, 239);
             this.commentsRichTextBox.Name = "commentsRichTextBox";
-            this.commentsRichTextBox.Size = new System.Drawing.Size(303, 105);
+            this.commentsRichTextBox.Size = new System.Drawing.Size(364, 182);
             this.commentsRichTextBox.TabIndex = 18;
             this.commentsRichTextBox.Text = "";
             // 
-            // addCommentButton
+            // ordersGridControl
             // 
-            this.addCommentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addCommentButton.Location = new System.Drawing.Point(707, 346);
-            this.addCommentButton.Name = "addCommentButton";
-            this.addCommentButton.Size = new System.Drawing.Size(26, 24);
-            this.addCommentButton.TabIndex = 19;
-            this.addCommentButton.Text = "+";
-            this.addCommentButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.addCommentButton.UseVisualStyleBackColor = true;
-            this.addCommentButton.Click += new System.EventHandler(this.addCommentButton_Click);
+            this.ordersGridControl.Location = new System.Drawing.Point(31, 239);
+            this.ordersGridControl.MainView = this.gridView1;
+            this.ordersGridControl.Name = "ordersGridControl";
+            this.ordersGridControl.Size = new System.Drawing.Size(439, 208);
+            this.ordersGridControl.TabIndex = 23;
+            this.ordersGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.orderNumberGridColumn,
+            this.statusGridColumn,
+            this.dateGridColumn});
+            this.gridView1.GridControl = this.ordersGridControl;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(564, 402);
+            this.saveButton.Location = new System.Drawing.Point(569, 489);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
-            this.saveButton.TabIndex = 20;
+            this.saveButton.Size = new System.Drawing.Size(95, 22);
+            this.saveButton.TabIndex = 24;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // saveCloseButton
             // 
-            this.saveCloseButton.Location = new System.Drawing.Point(645, 402);
+            this.saveCloseButton.Location = new System.Drawing.Point(670, 489);
             this.saveCloseButton.Name = "saveCloseButton";
-            this.saveCloseButton.Size = new System.Drawing.Size(105, 23);
-            this.saveCloseButton.TabIndex = 21;
-            this.saveCloseButton.Text = "Save and close";
-            this.saveCloseButton.UseVisualStyleBackColor = true;
+            this.saveCloseButton.Size = new System.Drawing.Size(95, 22);
+            this.saveCloseButton.TabIndex = 25;
+            this.saveCloseButton.Text = "Save and Close";
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(756, 402);
+            this.closeButton.Location = new System.Drawing.Point(776, 489);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 22;
+            this.closeButton.Size = new System.Drawing.Size(95, 22);
+            this.closeButton.TabIndex = 26;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            // 
+            // isActiveCheckEdit
+            // 
+            this.isActiveCheckEdit.Location = new System.Drawing.Point(32, 492);
+            this.isActiveCheckEdit.Name = "isActiveCheckEdit";
+            this.isActiveCheckEdit.Properties.Caption = "Active";
+            this.isActiveCheckEdit.Size = new System.Drawing.Size(75, 19);
+            this.isActiveCheckEdit.TabIndex = 27;
+            // 
+            // newCommentTextEdit
+            // 
+            this.newCommentTextEdit.Location = new System.Drawing.Point(507, 444);
+            this.newCommentTextEdit.Name = "newCommentTextEdit";
+            this.newCommentTextEdit.Size = new System.Drawing.Size(331, 20);
+            this.newCommentTextEdit.TabIndex = 28;
+            // 
+            // addCommentButton
+            // 
+            this.addCommentButton.Location = new System.Drawing.Point(844, 443);
+            this.addCommentButton.Name = "addCommentButton";
+            this.addCommentButton.Size = new System.Drawing.Size(28, 22);
+            this.addCommentButton.TabIndex = 29;
+            this.addCommentButton.Text = "+";
+            // 
+            // firstNameTextEdit
+            // 
+            this.firstNameTextEdit.Location = new System.Drawing.Point(31, 34);
+            this.firstNameTextEdit.Name = "firstNameTextEdit";
+            this.firstNameTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.firstNameTextEdit.TabIndex = 30;
+            // 
+            // middleNameTextEdit
+            // 
+            this.middleNameTextEdit.Location = new System.Drawing.Point(329, 34);
+            this.middleNameTextEdit.Name = "middleNameTextEdit";
+            this.middleNameTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.middleNameTextEdit.TabIndex = 31;
+            // 
+            // lastNameTextEdit
+            // 
+            this.lastNameTextEdit.Location = new System.Drawing.Point(638, 34);
+            this.lastNameTextEdit.Name = "lastNameTextEdit";
+            this.lastNameTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.lastNameTextEdit.TabIndex = 32;
+            // 
+            // cityTextEdit
+            // 
+            this.cityTextEdit.Location = new System.Drawing.Point(31, 112);
+            this.cityTextEdit.Name = "cityTextEdit";
+            this.cityTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.cityTextEdit.TabIndex = 33;
+            // 
+            // orderNumberGridColumn
+            // 
+            this.orderNumberGridColumn.Caption = "Order number";
+            this.orderNumberGridColumn.Name = "orderNumberGridColumn";
+            this.orderNumberGridColumn.Visible = true;
+            this.orderNumberGridColumn.VisibleIndex = 0;
+            // 
+            // statusGridColumn
+            // 
+            this.statusGridColumn.Caption = "Status";
+            this.statusGridColumn.Name = "statusGridColumn";
+            this.statusGridColumn.Visible = true;
+            this.statusGridColumn.VisibleIndex = 1;
+            // 
+            // dateGridColumn
+            // 
+            this.dateGridColumn.Caption = "Date";
+            this.dateGridColumn.Name = "dateGridColumn";
+            this.dateGridColumn.Visible = true;
+            this.dateGridColumn.VisibleIndex = 2;
             // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 465);
+            this.ClientSize = new System.Drawing.Size(904, 561);
+            this.Controls.Add(this.cityTextEdit);
+            this.Controls.Add(this.lastNameTextEdit);
+            this.Controls.Add(this.middleNameTextEdit);
+            this.Controls.Add(this.firstNameTextEdit);
+            this.Controls.Add(this.addCommentButton);
+            this.Controls.Add(this.newCommentTextEdit);
+            this.Controls.Add(this.isActiveCheckEdit);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.saveCloseButton);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.addCommentButton);
+            this.Controls.Add(this.ordersGridControl);
             this.Controls.Add(this.commentsRichTextBox);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.isActiveCheckBox);
-            this.Controls.Add(this.ordersGridView);
             this.Controls.Add(this.telephonesRichTextBox);
             this.Controls.Add(this.adressRichTextBox);
-            this.Controls.Add(this.newCommentTextBox);
-            this.Controls.Add(this.cityTextBox);
-            this.Controls.Add(this.lastNameTextBox);
-            this.Controls.Add(this.middleNameTextBox);
-            this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.ordersLabel);
             this.Controls.Add(this.commentsLabel);
             this.Controls.Add(this.telephonesLabel);
@@ -285,7 +318,14 @@
             this.Name = "ClientForm";
             this.Text = "Client form";
             this.Load += new System.EventHandler(this.ClientForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.isActiveCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCommentTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,20 +341,24 @@
         private System.Windows.Forms.Label telephonesLabel;
         private System.Windows.Forms.Label commentsLabel;
         private System.Windows.Forms.Label ordersLabel;
-        private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.TextBox middleNameTextBox;
-        private System.Windows.Forms.TextBox lastNameTextBox;
-        private System.Windows.Forms.TextBox cityTextBox;
-        private System.Windows.Forms.TextBox newCommentTextBox;
         private System.Windows.Forms.RichTextBox adressRichTextBox;
         private System.Windows.Forms.RichTextBox telephonesRichTextBox;
-        private System.Windows.Forms.DataGridView ordersGridView;
-        private System.Windows.Forms.CheckBox isActiveCheckBox;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.RichTextBox commentsRichTextBox;
-        private System.Windows.Forms.Button addCommentButton;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button saveCloseButton;
-        private System.Windows.Forms.Button closeButton;
+        private DevExpress.XtraGrid.GridControl ordersGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton saveButton;
+        private DevExpress.XtraEditors.SimpleButton saveCloseButton;
+        private DevExpress.XtraEditors.SimpleButton closeButton;
+        private DevExpress.XtraEditors.CheckEdit isActiveCheckEdit;
+        private DevExpress.XtraEditors.TextEdit newCommentTextEdit;
+        private DevExpress.XtraEditors.SimpleButton addCommentButton;
+        private DevExpress.XtraEditors.TextEdit firstNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit middleNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit lastNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit cityTextEdit;
+        private DevExpress.XtraGrid.Columns.GridColumn orderNumberGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn statusGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn dateGridColumn;
     }
 }
