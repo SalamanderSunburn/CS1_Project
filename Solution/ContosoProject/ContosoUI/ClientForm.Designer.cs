@@ -111,7 +111,7 @@
             // commentsLabel
             // 
             this.commentsLabel.AutoSize = true;
-            this.commentsLabel.Location = new System.Drawing.Point(379, 213);
+            this.commentsLabel.Location = new System.Drawing.Point(427, 213);
             this.commentsLabel.Name = "commentsLabel";
             this.commentsLabel.Size = new System.Drawing.Size(56, 13);
             this.commentsLabel.TabIndex = 6;
@@ -156,9 +156,10 @@
             // 
             // newCommentTextBox
             // 
-            this.newCommentTextBox.Location = new System.Drawing.Point(382, 350);
+            this.newCommentTextBox.Location = new System.Drawing.Point(430, 347);
+            this.newCommentTextBox.Multiline = true;
             this.newCommentTextBox.Name = "newCommentTextBox";
-            this.newCommentTextBox.Size = new System.Drawing.Size(319, 20);
+            this.newCommentTextBox.Size = new System.Drawing.Size(271, 23);
             this.newCommentTextBox.TabIndex = 12;
             // 
             // adressRichTextBox
@@ -184,13 +185,13 @@
             this.ordersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ordersGridView.Location = new System.Drawing.Point(31, 239);
             this.ordersGridView.Name = "ordersGridView";
-            this.ordersGridView.Size = new System.Drawing.Size(293, 122);
+            this.ordersGridView.Size = new System.Drawing.Size(362, 131);
             this.ordersGridView.TabIndex = 15;
             // 
             // isActiveCheckBox
             // 
             this.isActiveCheckBox.AutoSize = true;
-            this.isActiveCheckBox.Location = new System.Drawing.Point(12, 382);
+            this.isActiveCheckBox.Location = new System.Drawing.Point(32, 408);
             this.isActiveCheckBox.Name = "isActiveCheckBox";
             this.isActiveCheckBox.Size = new System.Drawing.Size(56, 17);
             this.isActiveCheckBox.TabIndex = 16;
@@ -199,17 +200,17 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 413);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 443);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(801, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(843, 22);
             this.statusStrip1.TabIndex = 17;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // commentsRichTextBox
             // 
-            this.commentsRichTextBox.Location = new System.Drawing.Point(382, 239);
+            this.commentsRichTextBox.Location = new System.Drawing.Point(430, 239);
             this.commentsRichTextBox.Name = "commentsRichTextBox";
-            this.commentsRichTextBox.Size = new System.Drawing.Size(351, 105);
+            this.commentsRichTextBox.Size = new System.Drawing.Size(303, 105);
             this.commentsRichTextBox.TabIndex = 18;
             this.commentsRichTextBox.Text = "";
             // 
@@ -227,7 +228,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(515, 376);
+            this.saveButton.Location = new System.Drawing.Point(564, 402);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 20;
@@ -237,7 +238,7 @@
             // 
             // saveCloseButton
             // 
-            this.saveCloseButton.Location = new System.Drawing.Point(596, 376);
+            this.saveCloseButton.Location = new System.Drawing.Point(645, 402);
             this.saveCloseButton.Name = "saveCloseButton";
             this.saveCloseButton.Size = new System.Drawing.Size(105, 23);
             this.saveCloseButton.TabIndex = 21;
@@ -246,7 +247,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(707, 376);
+            this.closeButton.Location = new System.Drawing.Point(756, 402);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 22;
@@ -257,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 435);
+            this.ClientSize = new System.Drawing.Size(843, 465);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.saveCloseButton);
             this.Controls.Add(this.saveButton);

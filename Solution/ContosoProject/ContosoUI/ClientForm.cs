@@ -28,7 +28,7 @@ namespace ContosoUI
 
         private void ClientForm_Load(object sender, EventArgs e)
         {
-            FillControls();
+            //FillControls();
         }
 
         private void FillControls()
