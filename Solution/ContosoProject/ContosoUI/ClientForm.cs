@@ -13,7 +13,7 @@ using Domain.Entities.Comments;
 
 namespace ContosoUI
 {
-    public partial class ClientForm : Form
+    public partial class ClientForm : DevExpress.XtraEditors.XtraForm
     {
         private static readonly int GENERATED_ID = 5;
         private Client _client;
