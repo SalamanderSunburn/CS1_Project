@@ -69,7 +69,7 @@
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.Location = new System.Drawing.Point(41, 42);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(55, 13);
+            this.firstNameLabel.Size = new System.Drawing.Size(57, 13);
             this.firstNameLabel.TabIndex = 0;
             this.firstNameLabel.Text = "First name";
             // 
@@ -78,7 +78,7 @@
             this.middleNameLabel.AutoSize = true;
             this.middleNameLabel.Location = new System.Drawing.Point(298, 42);
             this.middleNameLabel.Name = "middleNameLabel";
-            this.middleNameLabel.Size = new System.Drawing.Size(67, 13);
+            this.middleNameLabel.Size = new System.Drawing.Size(66, 13);
             this.middleNameLabel.TabIndex = 1;
             this.middleNameLabel.Text = "Middle name";
             // 
@@ -96,7 +96,7 @@
             this.cityLabel.AutoSize = true;
             this.cityLabel.Location = new System.Drawing.Point(42, 103);
             this.cityLabel.Name = "cityLabel";
-            this.cityLabel.Size = new System.Drawing.Size(24, 13);
+            this.cityLabel.Size = new System.Drawing.Size(26, 13);
             this.cityLabel.TabIndex = 3;
             this.cityLabel.Text = "City";
             // 
@@ -105,7 +105,7 @@
             this.adressLabel.AutoSize = true;
             this.adressLabel.Location = new System.Drawing.Point(298, 100);
             this.adressLabel.Name = "adressLabel";
-            this.adressLabel.Size = new System.Drawing.Size(39, 13);
+            this.adressLabel.Size = new System.Drawing.Size(40, 13);
             this.adressLabel.TabIndex = 4;
             this.adressLabel.Text = "Adress";
             // 
@@ -114,7 +114,7 @@
             this.telephonesLabel.AutoSize = true;
             this.telephonesLabel.Location = new System.Drawing.Point(553, 100);
             this.telephonesLabel.Name = "telephonesLabel";
-            this.telephonesLabel.Size = new System.Drawing.Size(63, 13);
+            this.telephonesLabel.Size = new System.Drawing.Size(62, 13);
             this.telephonesLabel.TabIndex = 5;
             this.telephonesLabel.Text = "Telephones";
             // 
@@ -123,7 +123,7 @@
             this.commentsLabel.AutoSize = true;
             this.commentsLabel.Location = new System.Drawing.Point(496, 239);
             this.commentsLabel.Name = "commentsLabel";
-            this.commentsLabel.Size = new System.Drawing.Size(56, 13);
+            this.commentsLabel.Size = new System.Drawing.Size(57, 13);
             this.commentsLabel.TabIndex = 6;
             this.commentsLabel.Text = "Comments";
             // 
@@ -132,7 +132,7 @@
             this.ordersLabel.AutoSize = true;
             this.ordersLabel.Location = new System.Drawing.Point(43, 239);
             this.ordersLabel.Name = "ordersLabel";
-            this.ordersLabel.Size = new System.Drawing.Size(38, 13);
+            this.ordersLabel.Size = new System.Drawing.Size(40, 13);
             this.ordersLabel.TabIndex = 7;
             this.ordersLabel.Text = "Orders";
             // 
@@ -254,21 +254,21 @@
             // 
             this.firstNameTextEdit.Location = new System.Drawing.Point(44, 64);
             this.firstNameTextEdit.Name = "firstNameTextEdit";
-            this.firstNameTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.firstNameTextEdit.Size = new System.Drawing.Size(250, 20);
             this.firstNameTextEdit.TabIndex = 30;
             // 
             // middleNameTextEdit
             // 
             this.middleNameTextEdit.Location = new System.Drawing.Point(301, 64);
             this.middleNameTextEdit.Name = "middleNameTextEdit";
-            this.middleNameTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.middleNameTextEdit.Size = new System.Drawing.Size(250, 20);
             this.middleNameTextEdit.TabIndex = 31;
             // 
             // lastNameTextEdit
             // 
             this.lastNameTextEdit.Location = new System.Drawing.Point(556, 64);
             this.lastNameTextEdit.Name = "lastNameTextEdit";
-            this.lastNameTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.lastNameTextEdit.Size = new System.Drawing.Size(250, 20);
             this.lastNameTextEdit.TabIndex = 32;
             // 
             // cityTextEdit
