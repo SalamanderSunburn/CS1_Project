@@ -53,9 +53,5 @@ namespace ContosoUI
             _comments.Create(new Comment() { Date = DateTime.Now, EntityType = EntityType.Client, Id = GENERATED_ID, IsActive = true, Text = newCommentTextEdit.Text, User = null});
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-    }
+       }
 }

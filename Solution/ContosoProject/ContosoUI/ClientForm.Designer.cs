@@ -34,7 +34,6 @@
             this.cityLabel = new System.Windows.Forms.Label();
             this.adressLabel = new System.Windows.Forms.Label();
             this.telephonesLabel = new System.Windows.Forms.Label();
-            this.commentsLabel = new System.Windows.Forms.Label();
             this.ordersLabel = new System.Windows.Forms.Label();
             this.adressRichTextBox = new System.Windows.Forms.RichTextBox();
             this.telephonesRichTextBox = new System.Windows.Forms.RichTextBox();
@@ -54,6 +53,8 @@
             this.middleNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.lastNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.cityTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.personalGroupControl = new DevExpress.XtraEditors.GroupControl();
+            this.commentsGroupControl = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.isActiveCheckEdit.Properties)).BeginInit();
@@ -62,12 +63,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.middleNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalGroupControl)).BeginInit();
+            this.personalGroupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commentsGroupControl)).BeginInit();
+            this.commentsGroupControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(41, 42);
+            this.firstNameLabel.Location = new System.Drawing.Point(13, 35);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(57, 13);
             this.firstNameLabel.TabIndex = 0;
@@ -76,7 +81,7 @@
             // middleNameLabel
             // 
             this.middleNameLabel.AutoSize = true;
-            this.middleNameLabel.Location = new System.Drawing.Point(298, 42);
+            this.middleNameLabel.Location = new System.Drawing.Point(14, 80);
             this.middleNameLabel.Name = "middleNameLabel";
             this.middleNameLabel.Size = new System.Drawing.Size(66, 13);
             this.middleNameLabel.TabIndex = 1;
@@ -85,7 +90,7 @@
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(553, 42);
+            this.lastNameLabel.Location = new System.Drawing.Point(14, 128);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(56, 13);
             this.lastNameLabel.TabIndex = 2;
@@ -94,7 +99,7 @@
             // cityLabel
             // 
             this.cityLabel.AutoSize = true;
-            this.cityLabel.Location = new System.Drawing.Point(42, 103);
+            this.cityLabel.Location = new System.Drawing.Point(13, 181);
             this.cityLabel.Name = "cityLabel";
             this.cityLabel.Size = new System.Drawing.Size(26, 13);
             this.cityLabel.TabIndex = 3;
@@ -103,7 +108,7 @@
             // adressLabel
             // 
             this.adressLabel.AutoSize = true;
-            this.adressLabel.Location = new System.Drawing.Point(298, 100);
+            this.adressLabel.Location = new System.Drawing.Point(160, 185);
             this.adressLabel.Name = "adressLabel";
             this.adressLabel.Size = new System.Drawing.Size(40, 13);
             this.adressLabel.TabIndex = 4;
@@ -112,25 +117,16 @@
             // telephonesLabel
             // 
             this.telephonesLabel.AutoSize = true;
-            this.telephonesLabel.Location = new System.Drawing.Point(553, 100);
+            this.telephonesLabel.Location = new System.Drawing.Point(160, 35);
             this.telephonesLabel.Name = "telephonesLabel";
             this.telephonesLabel.Size = new System.Drawing.Size(62, 13);
             this.telephonesLabel.TabIndex = 5;
             this.telephonesLabel.Text = "Telephones";
             // 
-            // commentsLabel
-            // 
-            this.commentsLabel.AutoSize = true;
-            this.commentsLabel.Location = new System.Drawing.Point(496, 239);
-            this.commentsLabel.Name = "commentsLabel";
-            this.commentsLabel.Size = new System.Drawing.Size(57, 13);
-            this.commentsLabel.TabIndex = 6;
-            this.commentsLabel.Text = "Comments";
-            // 
             // ordersLabel
             // 
             this.ordersLabel.AutoSize = true;
-            this.ordersLabel.Location = new System.Drawing.Point(43, 239);
+            this.ordersLabel.Location = new System.Drawing.Point(92, 483);
             this.ordersLabel.Name = "ordersLabel";
             this.ordersLabel.Size = new System.Drawing.Size(40, 13);
             this.ordersLabel.TabIndex = 7;
@@ -138,33 +134,33 @@
             // 
             // adressRichTextBox
             // 
-            this.adressRichTextBox.Location = new System.Drawing.Point(301, 128);
+            this.adressRichTextBox.Location = new System.Drawing.Point(163, 213);
             this.adressRichTextBox.Name = "adressRichTextBox";
             this.adressRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.adressRichTextBox.Size = new System.Drawing.Size(230, 82);
+            this.adressRichTextBox.Size = new System.Drawing.Size(266, 116);
             this.adressRichTextBox.TabIndex = 13;
             this.adressRichTextBox.Text = "";
             // 
             // telephonesRichTextBox
             // 
-            this.telephonesRichTextBox.Location = new System.Drawing.Point(556, 125);
+            this.telephonesRichTextBox.Location = new System.Drawing.Point(163, 60);
             this.telephonesRichTextBox.Name = "telephonesRichTextBox";
             this.telephonesRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.telephonesRichTextBox.Size = new System.Drawing.Size(234, 82);
+            this.telephonesRichTextBox.Size = new System.Drawing.Size(266, 110);
             this.telephonesRichTextBox.TabIndex = 14;
             this.telephonesRichTextBox.Text = "";
             // 
             // commentsRichTextBox
             // 
-            this.commentsRichTextBox.Location = new System.Drawing.Point(499, 265);
+            this.commentsRichTextBox.Location = new System.Drawing.Point(31, 35);
             this.commentsRichTextBox.Name = "commentsRichTextBox";
-            this.commentsRichTextBox.Size = new System.Drawing.Size(364, 182);
+            this.commentsRichTextBox.Size = new System.Drawing.Size(443, 208);
             this.commentsRichTextBox.TabIndex = 18;
             this.commentsRichTextBox.Text = "";
             // 
             // ordersGridControl
             // 
-            this.ordersGridControl.Location = new System.Drawing.Point(46, 265);
+            this.ordersGridControl.Location = new System.Drawing.Point(95, 509);
             this.ordersGridControl.MainView = this.gridView1;
             this.ordersGridControl.Name = "ordersGridControl";
             this.ordersGridControl.Size = new System.Drawing.Size(439, 208);
@@ -205,7 +201,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(566, 504);
+            this.saveButton.Location = new System.Drawing.Point(690, 683);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(95, 22);
             this.saveButton.TabIndex = 24;
@@ -213,7 +209,7 @@
             // 
             // saveCloseButton
             // 
-            this.saveCloseButton.Location = new System.Drawing.Point(667, 504);
+            this.saveCloseButton.Location = new System.Drawing.Point(791, 683);
             this.saveCloseButton.Name = "saveCloseButton";
             this.saveCloseButton.Size = new System.Drawing.Size(95, 22);
             this.saveCloseButton.TabIndex = 25;
@@ -221,7 +217,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(768, 504);
+            this.closeButton.Location = new System.Drawing.Point(892, 683);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(95, 22);
             this.closeButton.TabIndex = 26;
@@ -229,7 +225,7 @@
             // 
             // isActiveCheckEdit
             // 
-            this.isActiveCheckEdit.Location = new System.Drawing.Point(44, 501);
+            this.isActiveCheckEdit.Location = new System.Drawing.Point(16, 249);
             this.isActiveCheckEdit.Name = "isActiveCheckEdit";
             this.isActiveCheckEdit.Properties.Caption = "Active";
             this.isActiveCheckEdit.Size = new System.Drawing.Size(75, 19);
@@ -237,14 +233,14 @@
             // 
             // newCommentTextEdit
             // 
-            this.newCommentTextEdit.Location = new System.Drawing.Point(499, 454);
+            this.newCommentTextEdit.Location = new System.Drawing.Point(30, 250);
             this.newCommentTextEdit.Name = "newCommentTextEdit";
-            this.newCommentTextEdit.Size = new System.Drawing.Size(331, 20);
+            this.newCommentTextEdit.Size = new System.Drawing.Size(410, 20);
             this.newCommentTextEdit.TabIndex = 28;
             // 
             // addCommentButton
             // 
-            this.addCommentButton.Location = new System.Drawing.Point(836, 453);
+            this.addCommentButton.Location = new System.Drawing.Point(446, 248);
             this.addCommentButton.Name = "addCommentButton";
             this.addCommentButton.Size = new System.Drawing.Size(28, 22);
             this.addCommentButton.TabIndex = 29;
@@ -252,59 +248,76 @@
             // 
             // firstNameTextEdit
             // 
-            this.firstNameTextEdit.Location = new System.Drawing.Point(44, 64);
+            this.firstNameTextEdit.Location = new System.Drawing.Point(17, 57);
             this.firstNameTextEdit.Name = "firstNameTextEdit";
-            this.firstNameTextEdit.Size = new System.Drawing.Size(250, 20);
+            this.firstNameTextEdit.Size = new System.Drawing.Size(123, 20);
             this.firstNameTextEdit.TabIndex = 30;
             // 
             // middleNameTextEdit
             // 
-            this.middleNameTextEdit.Location = new System.Drawing.Point(301, 64);
+            this.middleNameTextEdit.Location = new System.Drawing.Point(17, 102);
             this.middleNameTextEdit.Name = "middleNameTextEdit";
-            this.middleNameTextEdit.Size = new System.Drawing.Size(250, 20);
+            this.middleNameTextEdit.Size = new System.Drawing.Size(123, 20);
             this.middleNameTextEdit.TabIndex = 31;
             // 
             // lastNameTextEdit
             // 
-            this.lastNameTextEdit.Location = new System.Drawing.Point(556, 64);
+            this.lastNameTextEdit.Location = new System.Drawing.Point(17, 150);
             this.lastNameTextEdit.Name = "lastNameTextEdit";
-            this.lastNameTextEdit.Size = new System.Drawing.Size(250, 20);
+            this.lastNameTextEdit.Size = new System.Drawing.Size(123, 20);
             this.lastNameTextEdit.TabIndex = 32;
             // 
             // cityTextEdit
             // 
-            this.cityTextEdit.Location = new System.Drawing.Point(44, 125);
+            this.cityTextEdit.Location = new System.Drawing.Point(16, 197);
             this.cityTextEdit.Name = "cityTextEdit";
-            this.cityTextEdit.Size = new System.Drawing.Size(230, 20);
+            this.cityTextEdit.Size = new System.Drawing.Size(123, 20);
             this.cityTextEdit.TabIndex = 33;
+            // 
+            // personalGroupControl
+            // 
+            this.personalGroupControl.Controls.Add(this.firstNameLabel);
+            this.personalGroupControl.Controls.Add(this.cityTextEdit);
+            this.personalGroupControl.Controls.Add(this.firstNameTextEdit);
+            this.personalGroupControl.Controls.Add(this.isActiveCheckEdit);
+            this.personalGroupControl.Controls.Add(this.lastNameTextEdit);
+            this.personalGroupControl.Controls.Add(this.middleNameTextEdit);
+            this.personalGroupControl.Controls.Add(this.middleNameLabel);
+            this.personalGroupControl.Controls.Add(this.lastNameLabel);
+            this.personalGroupControl.Controls.Add(this.adressRichTextBox);
+            this.personalGroupControl.Controls.Add(this.adressLabel);
+            this.personalGroupControl.Controls.Add(this.telephonesRichTextBox);
+            this.personalGroupControl.Controls.Add(this.telephonesLabel);
+            this.personalGroupControl.Controls.Add(this.cityLabel);
+            this.personalGroupControl.Location = new System.Drawing.Point(12, 12);
+            this.personalGroupControl.Name = "personalGroupControl";
+            this.personalGroupControl.Size = new System.Drawing.Size(449, 351);
+            this.personalGroupControl.TabIndex = 34;
+            this.personalGroupControl.Text = "Personal data";
+            // 
+            // commentsGroupControl
+            // 
+            this.commentsGroupControl.Controls.Add(this.commentsRichTextBox);
+            this.commentsGroupControl.Controls.Add(this.addCommentButton);
+            this.commentsGroupControl.Controls.Add(this.newCommentTextEdit);
+            this.commentsGroupControl.Location = new System.Drawing.Point(493, 12);
+            this.commentsGroupControl.Name = "commentsGroupControl";
+            this.commentsGroupControl.Size = new System.Drawing.Size(503, 351);
+            this.commentsGroupControl.TabIndex = 35;
+            this.commentsGroupControl.Text = "Comments";
             // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 561);
-            this.Controls.Add(this.cityTextEdit);
-            this.Controls.Add(this.lastNameTextEdit);
-            this.Controls.Add(this.middleNameTextEdit);
-            this.Controls.Add(this.firstNameTextEdit);
-            this.Controls.Add(this.addCommentButton);
-            this.Controls.Add(this.newCommentTextEdit);
-            this.Controls.Add(this.isActiveCheckEdit);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.commentsGroupControl);
+            this.Controls.Add(this.personalGroupControl);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.saveCloseButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.ordersGridControl);
-            this.Controls.Add(this.commentsRichTextBox);
-            this.Controls.Add(this.telephonesRichTextBox);
-            this.Controls.Add(this.adressRichTextBox);
             this.Controls.Add(this.ordersLabel);
-            this.Controls.Add(this.commentsLabel);
-            this.Controls.Add(this.telephonesLabel);
-            this.Controls.Add(this.adressLabel);
-            this.Controls.Add(this.cityLabel);
-            this.Controls.Add(this.lastNameLabel);
-            this.Controls.Add(this.middleNameLabel);
-            this.Controls.Add(this.firstNameLabel);
             this.Name = "ClientForm";
             this.Text = "Client form";
             this.Load += new System.EventHandler(this.ClientForm_Load);
@@ -316,6 +329,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.middleNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalGroupControl)).EndInit();
+            this.personalGroupControl.ResumeLayout(false);
+            this.personalGroupControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commentsGroupControl)).EndInit();
+            this.commentsGroupControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +347,6 @@
         private System.Windows.Forms.Label cityLabel;
         private System.Windows.Forms.Label adressLabel;
         private System.Windows.Forms.Label telephonesLabel;
-        private System.Windows.Forms.Label commentsLabel;
         private System.Windows.Forms.Label ordersLabel;
         private System.Windows.Forms.RichTextBox adressRichTextBox;
         private System.Windows.Forms.RichTextBox telephonesRichTextBox;
@@ -349,5 +366,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn orderNumberGridColumn;
         private DevExpress.XtraGrid.Columns.GridColumn statusGridColumn;
         private DevExpress.XtraGrid.Columns.GridColumn dateGridColumn;
+        private DevExpress.XtraEditors.GroupControl personalGroupControl;
+        private DevExpress.XtraEditors.GroupControl commentsGroupControl;
     }
 }
