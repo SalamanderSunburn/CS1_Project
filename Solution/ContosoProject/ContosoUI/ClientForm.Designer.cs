@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControl = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.commentsGroupControl = new DevExpress.XtraEditors.GroupControl();
+            this.commentsRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.addCommentButton = new DevExpress.XtraEditors.SimpleButton();
+            this.newCommentTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.personalGroupControl = new DevExpress.XtraEditors.GroupControl();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.cityTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -53,20 +56,19 @@
             this.statusGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dateGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ordersLabel = new System.Windows.Forms.Label();
-            this.PersonalDataGroupLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
-            this.closeButtonLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
-            this.saveAndCloseButtonLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControl = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlCommentsGroup = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlPersonalDataGroup = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlCloseButton = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlSaveAndCloseButton = new DevExpress.XtraLayout.LayoutControlItem();
             this.saveButtonLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ordersDataGridLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ordersLabelLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
-            this.CommentsGroupLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
-            this.commentsGroupControl = new DevExpress.XtraEditors.GroupControl();
-            this.commentsRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.addCommentButton = new DevExpress.XtraEditors.SimpleButton();
-            this.newCommentTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlOrdersDataGrid = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlOrdersLabel = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentsGroupControl)).BeginInit();
+            this.commentsGroupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.newCommentTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalGroupControl)).BeginInit();
             this.personalGroupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cityTextEdit.Properties)).BeginInit();
@@ -76,16 +78,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.middleNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PersonalDataGroupLayoutControlItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonLayoutControlItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAndCloseButtonLayoutControlItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentsGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlPersonalDataGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCloseButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlSaveAndCloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveButtonLayoutControlItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersDataGridLayoutControlItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersLabelLayoutControlItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CommentsGroupLayoutControlItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentsGroupControl)).BeginInit();
-            this.commentsGroupControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.newCommentTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersLabel)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -105,22 +105,39 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControl
+            // commentsGroupControl
             // 
-            this.layoutControl.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControl.GroupBordersVisible = false;
-            this.layoutControl.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.CommentsGroupLayoutControlItem,
-            this.PersonalDataGroupLayoutControlItem,
-            this.closeButtonLayoutControlItem,
-            this.saveAndCloseButtonLayoutControlItem,
-            this.saveButtonLayoutControlItem,
-            this.ordersDataGridLayoutControlItem,
-            this.ordersLabelLayoutControlItem});
-            this.layoutControl.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl.Name = "Root";
-            this.layoutControl.Size = new System.Drawing.Size(1002, 730);
-            this.layoutControl.TextVisible = false;
+            this.commentsGroupControl.Controls.Add(this.commentsRichTextBox);
+            this.commentsGroupControl.Controls.Add(this.addCommentButton);
+            this.commentsGroupControl.Controls.Add(this.newCommentTextEdit);
+            this.commentsGroupControl.Location = new System.Drawing.Point(12, 12);
+            this.commentsGroupControl.Name = "commentsGroupControl";
+            this.commentsGroupControl.Size = new System.Drawing.Size(978, 276);
+            this.commentsGroupControl.TabIndex = 42;
+            this.commentsGroupControl.Text = "Comments";
+            // 
+            // commentsRichTextBox
+            // 
+            this.commentsRichTextBox.Location = new System.Drawing.Point(16, 34);
+            this.commentsRichTextBox.Name = "commentsRichTextBox";
+            this.commentsRichTextBox.Size = new System.Drawing.Size(443, 208);
+            this.commentsRichTextBox.TabIndex = 30;
+            this.commentsRichTextBox.Text = "";
+            // 
+            // addCommentButton
+            // 
+            this.addCommentButton.Location = new System.Drawing.Point(431, 247);
+            this.addCommentButton.Name = "addCommentButton";
+            this.addCommentButton.Size = new System.Drawing.Size(28, 22);
+            this.addCommentButton.TabIndex = 32;
+            this.addCommentButton.Text = "+";
+            // 
+            // newCommentTextEdit
+            // 
+            this.newCommentTextEdit.Location = new System.Drawing.Point(15, 249);
+            this.newCommentTextEdit.Name = "newCommentTextEdit";
+            this.newCommentTextEdit.Size = new System.Drawing.Size(410, 20);
+            this.newCommentTextEdit.TabIndex = 31;
             // 
             // personalGroupControl
             // 
@@ -327,32 +344,58 @@
             this.ordersLabel.TabIndex = 36;
             this.ordersLabel.Text = "Orders";
             // 
-            // PersonalDataGroupLayoutControlItem
+            // layoutControl
             // 
-            this.PersonalDataGroupLayoutControlItem.Control = this.personalGroupControl;
-            this.PersonalDataGroupLayoutControlItem.Location = new System.Drawing.Point(0, 280);
-            this.PersonalDataGroupLayoutControlItem.Name = "PersonalDataGroupLayoutControlItem";
-            this.PersonalDataGroupLayoutControlItem.Size = new System.Drawing.Size(982, 304);
-            this.PersonalDataGroupLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
-            this.PersonalDataGroupLayoutControlItem.TextVisible = false;
+            this.layoutControl.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControl.GroupBordersVisible = false;
+            this.layoutControl.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlCommentsGroup,
+            this.layoutControlPersonalDataGroup,
+            this.layoutControlCloseButton,
+            this.layoutControlSaveAndCloseButton,
+            this.saveButtonLayoutControlItem,
+            this.layoutControlOrdersDataGrid,
+            this.layoutControlOrdersLabel});
+            this.layoutControl.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl.Name = "Root";
+            this.layoutControl.Size = new System.Drawing.Size(1002, 730);
+            this.layoutControl.TextVisible = false;
             // 
-            // closeButtonLayoutControlItem
+            // layoutControlCommentsGroup
             // 
-            this.closeButtonLayoutControlItem.Control = this.closeButton;
-            this.closeButtonLayoutControlItem.Location = new System.Drawing.Point(0, 584);
-            this.closeButtonLayoutControlItem.Name = "closeButtonLayoutControlItem";
-            this.closeButtonLayoutControlItem.Size = new System.Drawing.Size(982, 26);
-            this.closeButtonLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
-            this.closeButtonLayoutControlItem.TextVisible = false;
+            this.layoutControlCommentsGroup.Control = this.commentsGroupControl;
+            this.layoutControlCommentsGroup.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlCommentsGroup.Name = "layoutControlCommentsGroup";
+            this.layoutControlCommentsGroup.Size = new System.Drawing.Size(982, 280);
+            this.layoutControlCommentsGroup.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlCommentsGroup.TextVisible = false;
             // 
-            // saveAndCloseButtonLayoutControlItem
+            // layoutControlPersonalDataGroup
             // 
-            this.saveAndCloseButtonLayoutControlItem.Control = this.saveCloseButton;
-            this.saveAndCloseButtonLayoutControlItem.Location = new System.Drawing.Point(0, 610);
-            this.saveAndCloseButtonLayoutControlItem.Name = "saveAndCloseButtonLayoutControlItem";
-            this.saveAndCloseButtonLayoutControlItem.Size = new System.Drawing.Size(982, 26);
-            this.saveAndCloseButtonLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
-            this.saveAndCloseButtonLayoutControlItem.TextVisible = false;
+            this.layoutControlPersonalDataGroup.Control = this.personalGroupControl;
+            this.layoutControlPersonalDataGroup.Location = new System.Drawing.Point(0, 280);
+            this.layoutControlPersonalDataGroup.Name = "layoutControlPersonalDataGroup";
+            this.layoutControlPersonalDataGroup.Size = new System.Drawing.Size(982, 304);
+            this.layoutControlPersonalDataGroup.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlPersonalDataGroup.TextVisible = false;
+            // 
+            // layoutControlCloseButton
+            // 
+            this.layoutControlCloseButton.Control = this.closeButton;
+            this.layoutControlCloseButton.Location = new System.Drawing.Point(0, 584);
+            this.layoutControlCloseButton.Name = "layoutControlCloseButton";
+            this.layoutControlCloseButton.Size = new System.Drawing.Size(982, 26);
+            this.layoutControlCloseButton.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlCloseButton.TextVisible = false;
+            // 
+            // layoutControlSaveAndCloseButton
+            // 
+            this.layoutControlSaveAndCloseButton.Control = this.saveCloseButton;
+            this.layoutControlSaveAndCloseButton.Location = new System.Drawing.Point(0, 610);
+            this.layoutControlSaveAndCloseButton.Name = "layoutControlSaveAndCloseButton";
+            this.layoutControlSaveAndCloseButton.Size = new System.Drawing.Size(982, 26);
+            this.layoutControlSaveAndCloseButton.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlSaveAndCloseButton.TextVisible = false;
             // 
             // saveButtonLayoutControlItem
             // 
@@ -363,66 +406,23 @@
             this.saveButtonLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
             this.saveButtonLayoutControlItem.TextVisible = false;
             // 
-            // ordersDataGridLayoutControlItem
+            // layoutControlOrdersDataGrid
             // 
-            this.ordersDataGridLayoutControlItem.Control = this.ordersGridControl;
-            this.ordersDataGridLayoutControlItem.Location = new System.Drawing.Point(0, 662);
-            this.ordersDataGridLayoutControlItem.Name = "ordersDataGridLayoutControlItem";
-            this.ordersDataGridLayoutControlItem.Size = new System.Drawing.Size(982, 24);
-            this.ordersDataGridLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
-            this.ordersDataGridLayoutControlItem.TextVisible = false;
+            this.layoutControlOrdersDataGrid.Control = this.ordersGridControl;
+            this.layoutControlOrdersDataGrid.Location = new System.Drawing.Point(0, 662);
+            this.layoutControlOrdersDataGrid.Name = "layoutControlOrdersDataGrid";
+            this.layoutControlOrdersDataGrid.Size = new System.Drawing.Size(982, 24);
+            this.layoutControlOrdersDataGrid.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlOrdersDataGrid.TextVisible = false;
             // 
-            // ordersLabelLayoutControlItem
+            // layoutControlOrdersLabel
             // 
-            this.ordersLabelLayoutControlItem.Control = this.ordersLabel;
-            this.ordersLabelLayoutControlItem.Location = new System.Drawing.Point(0, 686);
-            this.ordersLabelLayoutControlItem.Name = "ordersLabelLayoutControlItem";
-            this.ordersLabelLayoutControlItem.Size = new System.Drawing.Size(982, 24);
-            this.ordersLabelLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
-            this.ordersLabelLayoutControlItem.TextVisible = false;
-            // 
-            // CommentsGroupLayoutControlItem
-            // 
-            this.CommentsGroupLayoutControlItem.Control = this.commentsGroupControl;
-            this.CommentsGroupLayoutControlItem.Location = new System.Drawing.Point(0, 0);
-            this.CommentsGroupLayoutControlItem.Name = "CommentsGroupLayoutControlItem";
-            this.CommentsGroupLayoutControlItem.Size = new System.Drawing.Size(982, 280);
-            this.CommentsGroupLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
-            this.CommentsGroupLayoutControlItem.TextVisible = false;
-            // 
-            // commentsGroupControl
-            // 
-            this.commentsGroupControl.Controls.Add(this.commentsRichTextBox);
-            this.commentsGroupControl.Controls.Add(this.addCommentButton);
-            this.commentsGroupControl.Controls.Add(this.newCommentTextEdit);
-            this.commentsGroupControl.Location = new System.Drawing.Point(12, 12);
-            this.commentsGroupControl.Name = "commentsGroupControl";
-            this.commentsGroupControl.Size = new System.Drawing.Size(978, 276);
-            this.commentsGroupControl.TabIndex = 42;
-            this.commentsGroupControl.Text = "Comments";
-            // 
-            // commentsRichTextBox
-            // 
-            this.commentsRichTextBox.Location = new System.Drawing.Point(16, 34);
-            this.commentsRichTextBox.Name = "commentsRichTextBox";
-            this.commentsRichTextBox.Size = new System.Drawing.Size(443, 208);
-            this.commentsRichTextBox.TabIndex = 30;
-            this.commentsRichTextBox.Text = "";
-            // 
-            // addCommentButton
-            // 
-            this.addCommentButton.Location = new System.Drawing.Point(431, 247);
-            this.addCommentButton.Name = "addCommentButton";
-            this.addCommentButton.Size = new System.Drawing.Size(28, 22);
-            this.addCommentButton.TabIndex = 32;
-            this.addCommentButton.Text = "+";
-            // 
-            // newCommentTextEdit
-            // 
-            this.newCommentTextEdit.Location = new System.Drawing.Point(15, 249);
-            this.newCommentTextEdit.Name = "newCommentTextEdit";
-            this.newCommentTextEdit.Size = new System.Drawing.Size(410, 20);
-            this.newCommentTextEdit.TabIndex = 31;
+            this.layoutControlOrdersLabel.Control = this.ordersLabel;
+            this.layoutControlOrdersLabel.Location = new System.Drawing.Point(0, 686);
+            this.layoutControlOrdersLabel.Name = "layoutControlOrdersLabel";
+            this.layoutControlOrdersLabel.Size = new System.Drawing.Size(982, 24);
+            this.layoutControlOrdersLabel.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlOrdersLabel.TextVisible = false;
             // 
             // ClientForm
             // 
@@ -435,7 +435,9 @@
             this.Load += new System.EventHandler(this.ClientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentsGroupControl)).EndInit();
+            this.commentsGroupControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.newCommentTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalGroupControl)).EndInit();
             this.personalGroupControl.ResumeLayout(false);
             this.personalGroupControl.PerformLayout();
@@ -446,16 +448,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.middleNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PersonalDataGroupLayoutControlItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButtonLayoutControlItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAndCloseButtonLayoutControlItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentsGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlPersonalDataGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCloseButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlSaveAndCloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveButtonLayoutControlItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersDataGridLayoutControlItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersLabelLayoutControlItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CommentsGroupLayoutControlItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentsGroupControl)).EndInit();
-            this.commentsGroupControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.newCommentTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersLabel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,13 +491,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn dateGridColumn;
         private System.Windows.Forms.Label ordersLabel;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControl;
-        private DevExpress.XtraLayout.LayoutControlItem CommentsGroupLayoutControlItem;
-        private DevExpress.XtraLayout.LayoutControlItem PersonalDataGroupLayoutControlItem;
-        private DevExpress.XtraLayout.LayoutControlItem closeButtonLayoutControlItem;
-        private DevExpress.XtraLayout.LayoutControlItem saveAndCloseButtonLayoutControlItem;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlCommentsGroup;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlPersonalDataGroup;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlCloseButton;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlSaveAndCloseButton;
         private DevExpress.XtraLayout.LayoutControlItem saveButtonLayoutControlItem;
-        private DevExpress.XtraLayout.LayoutControlItem ordersDataGridLayoutControlItem;
-        private DevExpress.XtraLayout.LayoutControlItem ordersLabelLayoutControlItem;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlOrdersDataGrid;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlOrdersLabel;
 
     }
 }
