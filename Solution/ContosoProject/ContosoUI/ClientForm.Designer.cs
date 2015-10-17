@@ -61,7 +61,7 @@
             this.layoutControlPersonalDataGroup = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlCloseButton = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlSaveAndCloseButton = new DevExpress.XtraLayout.LayoutControlItem();
-            this.saveButtonLayoutControlItem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlSaveButton = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlOrdersDataGrid = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlOrdersLabel = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -83,7 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlPersonalDataGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlSaveAndCloseButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveButtonLayoutControlItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlSaveButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersLabel)).BeginInit();
             this.SuspendLayout();
@@ -97,7 +97,7 @@
             this.layoutControl1.Controls.Add(this.saveButton);
             this.layoutControl1.Controls.Add(this.ordersGridControl);
             this.layoutControl1.Controls.Add(this.ordersLabel);
-            this.layoutControl1.Location = new System.Drawing.Point(2, 2);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(241, 154, 250, 350);
             this.layoutControl1.Root = this.layoutControl;
@@ -353,7 +353,7 @@
             this.layoutControlPersonalDataGroup,
             this.layoutControlCloseButton,
             this.layoutControlSaveAndCloseButton,
-            this.saveButtonLayoutControlItem,
+            this.layoutControlSaveButton,
             this.layoutControlOrdersDataGrid,
             this.layoutControlOrdersLabel});
             this.layoutControl.Location = new System.Drawing.Point(0, 0);
@@ -397,14 +397,14 @@
             this.layoutControlSaveAndCloseButton.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlSaveAndCloseButton.TextVisible = false;
             // 
-            // saveButtonLayoutControlItem
+            // layoutControlSaveButton
             // 
-            this.saveButtonLayoutControlItem.Control = this.saveButton;
-            this.saveButtonLayoutControlItem.Location = new System.Drawing.Point(0, 636);
-            this.saveButtonLayoutControlItem.Name = "saveButtonLayoutControlItem";
-            this.saveButtonLayoutControlItem.Size = new System.Drawing.Size(982, 26);
-            this.saveButtonLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
-            this.saveButtonLayoutControlItem.TextVisible = false;
+            this.layoutControlSaveButton.Control = this.saveButton;
+            this.layoutControlSaveButton.Location = new System.Drawing.Point(0, 636);
+            this.layoutControlSaveButton.Name = "layoutControlSaveButton";
+            this.layoutControlSaveButton.Size = new System.Drawing.Size(982, 26);
+            this.layoutControlSaveButton.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlSaveButton.TextVisible = false;
             // 
             // layoutControlOrdersDataGrid
             // 
@@ -453,7 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlPersonalDataGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlSaveAndCloseButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveButtonLayoutControlItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlSaveButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrdersLabel)).EndInit();
             this.ResumeLayout(false);
@@ -495,7 +495,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlPersonalDataGroup;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlCloseButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlSaveAndCloseButton;
-        private DevExpress.XtraLayout.LayoutControlItem saveButtonLayoutControlItem;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlSaveButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlOrdersDataGrid;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlOrdersLabel;
 
