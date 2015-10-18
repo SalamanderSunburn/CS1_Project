@@ -74,6 +74,12 @@
     <Compile Include="NicksForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NicksForms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NicksForms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NicksForms\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,14 +88,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="NicksForms\UserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NicksForms\UserForm.Designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="NicksForms\ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NicksForms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NicksForms\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
@@ -104,9 +107,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="NicksForms\UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

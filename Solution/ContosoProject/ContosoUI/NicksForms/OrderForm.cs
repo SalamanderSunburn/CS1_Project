@@ -23,5 +23,10 @@ namespace ContosoUI
 
         }
 
+        private void OrderForm_Resize(object sender, EventArgs e)
+        {
+            layoutControl.Size = this.Size;
+        }
+
     }
 }
