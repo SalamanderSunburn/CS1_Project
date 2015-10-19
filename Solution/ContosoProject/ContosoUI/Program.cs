@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ContosoUI.NicksForms;
 
 namespace ContosoUI
 {
@@ -16,7 +17,7 @@ namespace ContosoUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderForm());
+            Application.Run(new OrderViewList());
         }
     }
 }
