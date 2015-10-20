@@ -11,11 +11,16 @@ using DevExpress.XtraBars;
 
 namespace ContosoUI.NicksForms
 {
-    public partial class userViewList : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class clientViewList : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public userViewList()
+        public clientViewList()
         {
             InitializeComponent();
+        }
+
+        private void clientViewList_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

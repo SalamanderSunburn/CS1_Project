@@ -63,11 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NicksForms\ClientForm.cs">
+    <Compile Include="NicksForms\ClientViewList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NicksForms\ClientForm.Designer.cs">
-      <DependentUpon>ClientForm.cs</DependentUpon>
+    <Compile Include="NicksForms\ClientViewList.Designer.cs">
+      <DependentUpon>ClientViewList.cs</DependentUpon>
     </Compile>
     <Compile Include="NicksForms\MainForm.cs">
       <SubType>Form</SubType>
@@ -81,6 +81,12 @@
     <Compile Include="NicksForms\OrderViewList.Designer.cs">
       <DependentUpon>OrderViewList.cs</DependentUpon>
     </Compile>
+    <Compile Include="NicksForms\ProductViewList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NicksForms\ProductViewList.Designer.cs">
+      <DependentUpon>ProductViewList.cs</DependentUpon>
+    </Compile>
     <Compile Include="NicksForms\UserViewList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +95,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NicksForms\ClientForm.resx">
-      <DependentUpon>ClientForm.cs</DependentUpon>
+    <EmbeddedResource Include="NicksForms\ClientViewList.resx">
+      <DependentUpon>ClientViewList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NicksForms\OrderViewList.resx">
       <DependentUpon>OrderViewList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NicksForms\ProductViewList.resx">
+      <DependentUpon>ProductViewList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NicksForms\UserViewList.resx">
       <DependentUpon>UserViewList.cs</DependentUpon>

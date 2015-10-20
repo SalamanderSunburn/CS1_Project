@@ -17,7 +17,7 @@ namespace ContosoUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderViewList());
+            Application.Run(new productViewList());
         }
     }
 }

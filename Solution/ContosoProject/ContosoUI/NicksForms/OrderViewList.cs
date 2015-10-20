@@ -22,5 +22,10 @@ namespace ContosoUI.NicksForms
         {
 
         }
+
+        private void OrderViewList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
