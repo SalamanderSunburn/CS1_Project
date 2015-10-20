@@ -63,10 +63,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NicksForms\ClientViewList.cs">
+    <Compile Include="NicksForms\Client form\ClientViewList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NicksForms\ClientViewList.Designer.cs">
+    <Compile Include="NicksForms\Client form\ClientViewList.Designer.cs">
       <DependentUpon>ClientViewList.cs</DependentUpon>
     </Compile>
     <Compile Include="NicksForms\MainForm.cs">
@@ -75,36 +75,36 @@
     <Compile Include="NicksForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NicksForms\OrderViewList.cs">
+    <Compile Include="NicksForms\Order form\OrderViewList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NicksForms\OrderViewList.Designer.cs">
+    <Compile Include="NicksForms\Order form\OrderViewList.Designer.cs">
       <DependentUpon>OrderViewList.cs</DependentUpon>
     </Compile>
-    <Compile Include="NicksForms\ProductViewList.cs">
+    <Compile Include="NicksForms\Product form\ProductViewList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NicksForms\ProductViewList.Designer.cs">
+    <Compile Include="NicksForms\Product form\ProductViewList.Designer.cs">
       <DependentUpon>ProductViewList.cs</DependentUpon>
     </Compile>
-    <Compile Include="NicksForms\UserViewList.cs">
+    <Compile Include="NicksForms\User form\UserViewList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NicksForms\UserViewList.Designer.cs">
+    <Compile Include="NicksForms\User form\UserViewList.Designer.cs">
       <DependentUpon>UserViewList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NicksForms\ClientViewList.resx">
+    <EmbeddedResource Include="NicksForms\Client form\ClientViewList.resx">
       <DependentUpon>ClientViewList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NicksForms\OrderViewList.resx">
+    <EmbeddedResource Include="NicksForms\Order form\OrderViewList.resx">
       <DependentUpon>OrderViewList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NicksForms\ProductViewList.resx">
+    <EmbeddedResource Include="NicksForms\Product form\ProductViewList.resx">
       <DependentUpon>ProductViewList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NicksForms\UserViewList.resx">
+    <EmbeddedResource Include="NicksForms\User form\UserViewList.resx">
       <DependentUpon>UserViewList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
