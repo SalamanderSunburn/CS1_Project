@@ -1,6 +1,6 @@
 ﻿namespace ContosoUI.NicksForms
 {
-    partial class OrderViewList
+    partial class orderOrderViewList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,99 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderViewList));
-            this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.SaveAndNewBarButton = new DevExpress.XtraBars.BarButtonItem();
-            this.SaveBarButton = new DevExpress.XtraBars.BarButtonItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(orderOrderViewList));
+            this.orderRibbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.orderSaveAndNewBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.orderSaveBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.ClearBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageOrderView = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageFileGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageOrderGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.orderRibbonPageOrderView = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.orderRibbonPageFileGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.orderRibbonPageOrderGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.orderRibbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.orderViewLayoutControl = new DevExpress.XtraLayout.LayoutControl();
             this.ClientLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.addCommentButton = new DevExpress.XtraEditors.SimpleButton();
             this.newCommentTextBox = new System.Windows.Forms.TextBox();
             this.commentsListBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.OrderGridControl = new DevExpress.XtraGrid.GridControl();
+            this.orderGridControl = new DevExpress.XtraGrid.GridControl();
             this.orderGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.orderDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.StatusComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.orderStatusComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.orderNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlOrderNumberTextEdit = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlStatusComboBox = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlDateEdit = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tabbedControlOrderAndCommentGroup = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.orderTabbedControlOrderAndCommentGroup = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlCommentsList = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlCommentListBox = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlNewCommentTextBox = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlAddNewCommentButton = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlDataGrid = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlOrderGrid = new DevExpress.XtraLayout.LayoutControlItem();
-            this.splitter = new DevExpress.XtraLayout.SplitterItem();
+            this.orderSplitter = new DevExpress.XtraLayout.SplitterItem();
             this.layoutControlClientLookUp = new DevExpress.XtraLayout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderViewLayoutControl)).BeginInit();
             this.orderViewLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClientLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commentsListBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StatusComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderStatusComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderNumberTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrderNumberTextEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlStatusComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlDateEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlOrderAndCommentGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTabbedControlOrderAndCommentGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentListBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewCommentTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAddNewCommentButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrderGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderSplitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlClientLookUp)).BeginInit();
             this.SuspendLayout();
             // 
-            // ribbon
+            // orderRibbon
             // 
-            this.ribbon.ExpandCollapseItem.Id = 0;
-            this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbon.ExpandCollapseItem,
-            this.SaveAndNewBarButton,
-            this.SaveBarButton,
+            this.orderRibbon.ExpandCollapseItem.Id = 0;
+            this.orderRibbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.orderRibbon.ExpandCollapseItem,
+            this.orderSaveAndNewBarButton,
+            this.orderSaveBarButton,
             this.ClearBarButton,
             this.barButtonItem1});
-            this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 5;
-            this.ribbon.Name = "ribbon";
-            this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPageOrderView});
-            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbon.Size = new System.Drawing.Size(1014, 143);
-            this.ribbon.StatusBar = this.ribbonStatusBar;
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
+            this.orderRibbon.Location = new System.Drawing.Point(0, 0);
+            this.orderRibbon.MaxItemId = 5;
+            this.orderRibbon.Name = "orderRibbon";
+            this.orderRibbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.orderRibbonPageOrderView});
+            this.orderRibbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.orderRibbon.Size = new System.Drawing.Size(1014, 143);
+            this.orderRibbon.StatusBar = this.orderRibbonStatusBar;
+            this.orderRibbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
-            // SaveAndNewBarButton
+            // orderSaveAndNewBarButton
             // 
-            this.SaveAndNewBarButton.Caption = "Save and New";
-            this.SaveAndNewBarButton.Glyph = ((System.Drawing.Image)(resources.GetObject("SaveAndNewBarButton.Glyph")));
-            this.SaveAndNewBarButton.Id = 1;
-            this.SaveAndNewBarButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("SaveAndNewBarButton.LargeGlyph")));
-            this.SaveAndNewBarButton.Name = "SaveAndNewBarButton";
+            this.orderSaveAndNewBarButton.Caption = "Save and New";
+            this.orderSaveAndNewBarButton.Glyph = ((System.Drawing.Image)(resources.GetObject("orderSaveAndNewBarButton.Glyph")));
+            this.orderSaveAndNewBarButton.Id = 1;
+            this.orderSaveAndNewBarButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("orderSaveAndNewBarButton.LargeGlyph")));
+            this.orderSaveAndNewBarButton.Name = "orderSaveAndNewBarButton";
             // 
-            // SaveBarButton
+            // orderSaveBarButton
             // 
-            this.SaveBarButton.Caption = "Save";
-            this.SaveBarButton.Glyph = ((System.Drawing.Image)(resources.GetObject("SaveBarButton.Glyph")));
-            this.SaveBarButton.Id = 2;
-            this.SaveBarButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("SaveBarButton.LargeGlyph")));
-            this.SaveBarButton.Name = "SaveBarButton";
+            this.orderSaveBarButton.Caption = "Save";
+            this.orderSaveBarButton.Glyph = ((System.Drawing.Image)(resources.GetObject("orderSaveBarButton.Glyph")));
+            this.orderSaveBarButton.Id = 2;
+            this.orderSaveBarButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("orderSaveBarButton.LargeGlyph")));
+            this.orderSaveBarButton.Name = "orderSaveBarButton";
             // 
             // ClearBarButton
             // 
@@ -138,34 +138,34 @@
             this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // ribbonPageOrderView
+            // orderRibbonPageOrderView
             // 
-            this.ribbonPageOrderView.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageFileGroup,
-            this.ribbonPageOrderGroup});
-            this.ribbonPageOrderView.Name = "ribbonPageOrderView";
-            this.ribbonPageOrderView.Text = "Order view";
+            this.orderRibbonPageOrderView.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.orderRibbonPageFileGroup,
+            this.orderRibbonPageOrderGroup});
+            this.orderRibbonPageOrderView.Name = "orderRibbonPageOrderView";
+            this.orderRibbonPageOrderView.Text = "Order view";
             // 
-            // ribbonPageFileGroup
+            // orderRibbonPageFileGroup
             // 
-            this.ribbonPageFileGroup.ItemLinks.Add(this.SaveBarButton);
-            this.ribbonPageFileGroup.ItemLinks.Add(this.SaveAndNewBarButton);
-            this.ribbonPageFileGroup.ItemLinks.Add(this.ClearBarButton);
-            this.ribbonPageFileGroup.Name = "ribbonPageFileGroup";
-            this.ribbonPageFileGroup.Text = "File";
+            this.orderRibbonPageFileGroup.ItemLinks.Add(this.orderSaveBarButton);
+            this.orderRibbonPageFileGroup.ItemLinks.Add(this.orderSaveAndNewBarButton);
+            this.orderRibbonPageFileGroup.ItemLinks.Add(this.ClearBarButton);
+            this.orderRibbonPageFileGroup.Name = "orderRibbonPageFileGroup";
+            this.orderRibbonPageFileGroup.Text = "File";
             // 
-            // ribbonPageOrderGroup
+            // orderRibbonPageOrderGroup
             // 
-            this.ribbonPageOrderGroup.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageOrderGroup.Name = "ribbonPageOrderGroup";
-            this.ribbonPageOrderGroup.Text = "Order";
+            this.orderRibbonPageOrderGroup.ItemLinks.Add(this.barButtonItem1);
+            this.orderRibbonPageOrderGroup.Name = "orderRibbonPageOrderGroup";
+            this.orderRibbonPageOrderGroup.Text = "Order";
             // 
-            // ribbonStatusBar
+            // orderRibbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 736);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1014, 31);
+            this.orderRibbonStatusBar.Location = new System.Drawing.Point(0, 736);
+            this.orderRibbonStatusBar.Name = "orderRibbonStatusBar";
+            this.orderRibbonStatusBar.Ribbon = this.orderRibbon;
+            this.orderRibbonStatusBar.Size = new System.Drawing.Size(1014, 31);
             // 
             // orderViewLayoutControl
             // 
@@ -173,9 +173,9 @@
             this.orderViewLayoutControl.Controls.Add(this.addCommentButton);
             this.orderViewLayoutControl.Controls.Add(this.newCommentTextBox);
             this.orderViewLayoutControl.Controls.Add(this.commentsListBox);
-            this.orderViewLayoutControl.Controls.Add(this.OrderGridControl);
+            this.orderViewLayoutControl.Controls.Add(this.orderGridControl);
             this.orderViewLayoutControl.Controls.Add(this.orderDateEdit);
-            this.orderViewLayoutControl.Controls.Add(this.StatusComboBoxEdit);
+            this.orderViewLayoutControl.Controls.Add(this.orderStatusComboBoxEdit);
             this.orderViewLayoutControl.Controls.Add(this.orderNumberTextEdit);
             this.orderViewLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderViewLayoutControl.Location = new System.Drawing.Point(0, 143);
@@ -189,7 +189,7 @@
             // ClientLookUpEdit
             // 
             this.ClientLookUpEdit.Location = new System.Drawing.Point(15, 169);
-            this.ClientLookUpEdit.MenuManager = this.ribbon;
+            this.ClientLookUpEdit.MenuManager = this.orderRibbon;
             this.ClientLookUpEdit.Name = "ClientLookUpEdit";
             this.ClientLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -222,27 +222,27 @@
             this.commentsListBox.StyleController = this.orderViewLayoutControl;
             this.commentsListBox.TabIndex = 9;
             // 
-            // OrderGridControl
+            // orderGridControl
             // 
-            this.OrderGridControl.Location = new System.Drawing.Point(365, 46);
-            this.OrderGridControl.MainView = this.orderGridView;
-            this.OrderGridControl.MenuManager = this.ribbon;
-            this.OrderGridControl.Name = "OrderGridControl";
-            this.OrderGridControl.Size = new System.Drawing.Size(625, 523);
-            this.OrderGridControl.TabIndex = 8;
-            this.OrderGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.orderGridControl.Location = new System.Drawing.Point(365, 46);
+            this.orderGridControl.MainView = this.orderGridView;
+            this.orderGridControl.MenuManager = this.orderRibbon;
+            this.orderGridControl.Name = "orderGridControl";
+            this.orderGridControl.Size = new System.Drawing.Size(625, 523);
+            this.orderGridControl.TabIndex = 8;
+            this.orderGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.orderGridView});
             // 
             // orderGridView
             // 
-            this.orderGridView.GridControl = this.OrderGridControl;
+            this.orderGridView.GridControl = this.orderGridControl;
             this.orderGridView.Name = "orderGridView";
             // 
             // orderDateEdit
             // 
             this.orderDateEdit.EditValue = null;
             this.orderDateEdit.Location = new System.Drawing.Point(15, 123);
-            this.orderDateEdit.MenuManager = this.ribbon;
+            this.orderDateEdit.MenuManager = this.orderRibbon;
             this.orderDateEdit.Name = "orderDateEdit";
             this.orderDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -252,21 +252,21 @@
             this.orderDateEdit.StyleController = this.orderViewLayoutControl;
             this.orderDateEdit.TabIndex = 6;
             // 
-            // StatusComboBoxEdit
+            // orderStatusComboBoxEdit
             // 
-            this.StatusComboBoxEdit.Location = new System.Drawing.Point(15, 77);
-            this.StatusComboBoxEdit.MenuManager = this.ribbon;
-            this.StatusComboBoxEdit.Name = "StatusComboBoxEdit";
-            this.StatusComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.orderStatusComboBoxEdit.Location = new System.Drawing.Point(15, 77);
+            this.orderStatusComboBoxEdit.MenuManager = this.orderRibbon;
+            this.orderStatusComboBoxEdit.Name = "orderStatusComboBoxEdit";
+            this.orderStatusComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StatusComboBoxEdit.Size = new System.Drawing.Size(326, 20);
-            this.StatusComboBoxEdit.StyleController = this.orderViewLayoutControl;
-            this.StatusComboBoxEdit.TabIndex = 5;
+            this.orderStatusComboBoxEdit.Size = new System.Drawing.Size(326, 20);
+            this.orderStatusComboBoxEdit.StyleController = this.orderViewLayoutControl;
+            this.orderStatusComboBoxEdit.TabIndex = 5;
             // 
             // orderNumberTextEdit
             // 
             this.orderNumberTextEdit.Location = new System.Drawing.Point(15, 31);
-            this.orderNumberTextEdit.MenuManager = this.ribbon;
+            this.orderNumberTextEdit.MenuManager = this.orderRibbon;
             this.orderNumberTextEdit.Name = "orderNumberTextEdit";
             this.orderNumberTextEdit.Size = new System.Drawing.Size(326, 20);
             this.orderNumberTextEdit.StyleController = this.orderViewLayoutControl;
@@ -280,8 +280,8 @@
             this.layoutControlOrderNumberTextEdit,
             this.layoutControlStatusComboBox,
             this.layoutControlDateEdit,
-            this.tabbedControlOrderAndCommentGroup,
-            this.splitter,
+            this.orderTabbedControlOrderAndCommentGroup,
+            this.orderSplitter,
             this.layoutControlClientLookUp});
             this.layoutControlGroup.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup.Name = "layoutControlGroup";
@@ -301,7 +301,7 @@
             // 
             // layoutControlStatusComboBox
             // 
-            this.layoutControlStatusComboBox.Control = this.StatusComboBoxEdit;
+            this.layoutControlStatusComboBox.Control = this.orderStatusComboBoxEdit;
             this.layoutControlStatusComboBox.Location = new System.Drawing.Point(0, 46);
             this.layoutControlStatusComboBox.Name = "layoutControlStatusComboBox";
             this.layoutControlStatusComboBox.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
@@ -321,14 +321,14 @@
             this.layoutControlDateEdit.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlDateEdit.TextSize = new System.Drawing.Size(67, 13);
             // 
-            // tabbedControlOrderAndCommentGroup
+            // orderTabbedControlOrderAndCommentGroup
             // 
-            this.tabbedControlOrderAndCommentGroup.Location = new System.Drawing.Point(341, 0);
-            this.tabbedControlOrderAndCommentGroup.Name = "tabbedControlOrderAndCommentGroup";
-            this.tabbedControlOrderAndCommentGroup.SelectedTabPage = this.layoutControlCommentsList;
-            this.tabbedControlOrderAndCommentGroup.SelectedTabPageIndex = 1;
-            this.tabbedControlOrderAndCommentGroup.Size = new System.Drawing.Size(653, 573);
-            this.tabbedControlOrderAndCommentGroup.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.orderTabbedControlOrderAndCommentGroup.Location = new System.Drawing.Point(341, 0);
+            this.orderTabbedControlOrderAndCommentGroup.Name = "orderTabbedControlOrderAndCommentGroup";
+            this.orderTabbedControlOrderAndCommentGroup.SelectedTabPage = this.layoutControlDataGrid;
+            this.orderTabbedControlOrderAndCommentGroup.SelectedTabPageIndex = 0;
+            this.orderTabbedControlOrderAndCommentGroup.Size = new System.Drawing.Size(653, 573);
+            this.orderTabbedControlOrderAndCommentGroup.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlDataGrid,
             this.layoutControlCommentsList});
             // 
@@ -387,19 +387,19 @@
             // 
             // layoutControlOrderGrid
             // 
-            this.layoutControlOrderGrid.Control = this.OrderGridControl;
+            this.layoutControlOrderGrid.Control = this.orderGridControl;
             this.layoutControlOrderGrid.Location = new System.Drawing.Point(0, 0);
             this.layoutControlOrderGrid.Name = "layoutControlOrderGrid";
             this.layoutControlOrderGrid.Size = new System.Drawing.Size(629, 527);
             this.layoutControlOrderGrid.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlOrderGrid.TextVisible = false;
             // 
-            // splitter
+            // orderSplitter
             // 
-            this.splitter.AllowHotTrack = true;
-            this.splitter.Location = new System.Drawing.Point(336, 0);
-            this.splitter.Name = "splitter";
-            this.splitter.Size = new System.Drawing.Size(5, 573);
+            this.orderSplitter.AllowHotTrack = true;
+            this.orderSplitter.Location = new System.Drawing.Point(336, 0);
+            this.orderSplitter.Name = "orderSplitter";
+            this.orderSplitter.Size = new System.Drawing.Size(5, 573);
             // 
             // layoutControlClientLookUp
             // 
@@ -412,42 +412,42 @@
             this.layoutControlClientLookUp.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlClientLookUp.TextSize = new System.Drawing.Size(67, 13);
             // 
-            // OrderViewList
+            // orderOrderViewList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 767);
             this.Controls.Add(this.orderViewLayoutControl);
-            this.Controls.Add(this.ribbonStatusBar);
-            this.Controls.Add(this.ribbon);
-            this.Name = "OrderViewList";
-            this.Ribbon = this.ribbon;
-            this.StatusBar = this.ribbonStatusBar;
+            this.Controls.Add(this.orderRibbonStatusBar);
+            this.Controls.Add(this.orderRibbon);
+            this.Name = "orderOrderViewList";
+            this.Ribbon = this.orderRibbon;
+            this.StatusBar = this.orderRibbonStatusBar;
             this.Text = "OrderViewList";
             this.Load += new System.EventHandler(this.OrderViewList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderRibbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderViewLayoutControl)).EndInit();
             this.orderViewLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ClientLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commentsListBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StatusComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderStatusComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderNumberTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrderNumberTextEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlStatusComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlDateEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlOrderAndCommentGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTabbedControlOrderAndCommentGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentsList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentListBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewCommentTextBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAddNewCommentButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlOrderGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderSplitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlClientLookUp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -456,18 +456,18 @@
 
         #endregion
 
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageOrderView;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageFileGroup;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.BarButtonItem SaveAndNewBarButton;
-        private DevExpress.XtraBars.BarButtonItem SaveBarButton;
+        private DevExpress.XtraBars.Ribbon.RibbonControl orderRibbon;
+        private DevExpress.XtraBars.Ribbon.RibbonPage orderRibbonPageOrderView;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup orderRibbonPageFileGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar orderRibbonStatusBar;
+        private DevExpress.XtraBars.BarButtonItem orderSaveAndNewBarButton;
+        private DevExpress.XtraBars.BarButtonItem orderSaveBarButton;
         private DevExpress.XtraBars.BarButtonItem ClearBarButton;
         private DevExpress.XtraLayout.LayoutControl orderViewLayoutControl;
-        private DevExpress.XtraGrid.GridControl OrderGridControl;
+        private DevExpress.XtraGrid.GridControl orderGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView orderGridView;
         private DevExpress.XtraEditors.DateEdit orderDateEdit;
-        private DevExpress.XtraEditors.ComboBoxEdit StatusComboBoxEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit orderStatusComboBoxEdit;
         private DevExpress.XtraEditors.TextEdit orderNumberTextEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlOrderNumberTextEdit;
@@ -476,17 +476,17 @@
         private DevExpress.XtraEditors.SimpleButton addCommentButton;
         private System.Windows.Forms.TextBox newCommentTextBox;
         private DevExpress.XtraEditors.ListBoxControl commentsListBox;
-        private DevExpress.XtraLayout.TabbedControlGroup tabbedControlOrderAndCommentGroup;
+        private DevExpress.XtraLayout.TabbedControlGroup orderTabbedControlOrderAndCommentGroup;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlCommentsList;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlCommentListBox;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlNewCommentTextBox;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlAddNewCommentButton;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlDataGrid;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlOrderGrid;
-        private DevExpress.XtraLayout.SplitterItem splitter;
+        private DevExpress.XtraLayout.SplitterItem orderSplitter;
         private DevExpress.XtraEditors.LookUpEdit ClientLookUpEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlClientLookUp;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageOrderGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup orderRibbonPageOrderGroup;
     }
 }

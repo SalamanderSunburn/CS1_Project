@@ -11,9 +11,9 @@ using DevExpress.XtraBars;
 
 namespace ContosoUI.NicksForms
 {
-    public partial class OrderViewList : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class orderOrderViewList : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public OrderViewList()
+        public orderOrderViewList()
         {
             InitializeComponent();
         }
