@@ -14,14 +14,11 @@ namespace Data.EFRepository
         public ProjectContext()
             : base("name=ProjectContext")
         {
-            System.IO.Directory.CreateDirectory(System.AppDomain.CurrentDomain.BaseDirectory + "\\Data");
-            System.AppDomain.CurrentDomain.SetData("DataDirectory", System.AppDomain.CurrentDomain.BaseDirectory);
-
-            Database.SetInitializer(new DropCreateDatabaseAlways<ProjectContext>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<ProjectContext>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
+        {            
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Order> Orders { get; set; }
