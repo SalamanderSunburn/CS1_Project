@@ -32,7 +32,7 @@ namespace ContosoUI.ProductForm
 
         private String _searchTitleCategory = string.Empty;
         BindingList<Category> _categories = new BindingList<Category>();
-        private Category _categoryToSave = null;
+        private Category _categoryToSave = new Category();
         BindingList<Comment> _categoryComments = new BindingList<Comment>();
         private Category _categoryInUse = new Category();
         private int _id;
@@ -90,7 +90,8 @@ namespace ContosoUI.ProductForm
             {
                 _categoryRepository.Create(_categoryToSave);
             }
-            if (!_categoryRepository.GetAll().SequenceEqual(_categories))
+            var avalaibleCategories = _categoryRepository.GetAll();
+            if (!avalaibleCategories.SequenceEqual(_categories))
             {
                 foreach (var category in _categories)
                 {
@@ -102,7 +103,8 @@ namespace ContosoUI.ProductForm
         public void SaveCategoryInUse()
         {
             Category categoryToSave = new Category(_categoryComments) { Date = _categoryInUse.Date, Id = _categoryInUse.Id, IsActive = _categoryInUse.IsActive, Title = _categoryInUse.Title};
-            _categories[_categories.IndexOf(_categories.First(x => x.Title == categoryToSave.Title))] = categoryToSave;
+            if(categoryToSave.Id!=0)
+                _categories[_categories.IndexOf(_categories.First(x => x.Title == categoryToSave.Title))] = categoryToSave;
         }
 
         public void Save()

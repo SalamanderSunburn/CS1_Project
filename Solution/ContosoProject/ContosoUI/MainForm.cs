@@ -103,5 +103,11 @@ namespace ContosoUI
         {
             bgPictureEdit.Visible = false;
         }
+
+        private void barButtonItem1_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            var form = new RoleForm.RoleView() {MdiParent = this};
+            form.Show();
+        }
     }
 }
