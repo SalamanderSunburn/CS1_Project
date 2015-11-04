@@ -33,9 +33,9 @@ namespace ContosoUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonClientsGroup;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ContosoUI.ChairsSplashScreen), true, true);
             this.ClientsListBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.ClientBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.mainRibbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -53,12 +53,10 @@ namespace ContosoUI
             this.ribbonOrdersGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonProductsGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.systemRibbonGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.bgPictureEdit = new DevExpress.XtraEditors.PictureEdit();
+            this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             ribbonClientsGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bgPictureEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonClientsGroup
@@ -250,20 +248,6 @@ namespace ContosoUI
             this.xtraTabbedMdiManager.HeaderButtonsShowMode = DevExpress.XtraTab.TabButtonShowMode.WhenNeeded;
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // bgPictureEdit
-            // 
-            this.bgPictureEdit.EditValue = ((object)(resources.GetObject("bgPictureEdit.EditValue")));
-            this.bgPictureEdit.Location = new System.Drawing.Point(0, 149);
-            this.bgPictureEdit.Name = "bgPictureEdit";
-            this.bgPictureEdit.Properties.AllowFocused = false;
-            this.bgPictureEdit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.bgPictureEdit.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.bgPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.bgPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.bgPictureEdit.Properties.UseDisabledStatePainter = false;
-            this.bgPictureEdit.Size = new System.Drawing.Size(764, 482);
-            this.bgPictureEdit.TabIndex = 4;
-            // 
             // MainForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -273,17 +257,15 @@ namespace ContosoUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 632);
-            this.Controls.Add(this.bgPictureEdit);
             this.Controls.Add(this.mainRibbon);
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Ribbon = this.mainRibbon;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHAIRS";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.MdiChildActivate += new System.EventHandler(this.MainForm_MdiChildActivate);
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bgPictureEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +289,6 @@ namespace ContosoUI
         private BarButtonItem ClientBarButton;
         private RibbonPageGroup ribbonUserGroup;
         private RibbonPageGroup ribbonProductsGroup;
-        private DevExpress.XtraEditors.PictureEdit bgPictureEdit;
         private BarButtonItem RolesBarButton;
         private BarButtonItem CategoriesBarButton;
     }

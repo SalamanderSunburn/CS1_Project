@@ -101,11 +101,6 @@ namespace ContosoUI
             form.Show();
         }
 
-        private void MainForm_MdiChildActivate(object sender, EventArgs e)
-        {
-            bgPictureEdit.Visible = false;
-        }
-
         private void RolesBarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             //var form = new RoleForm.RoleView();
