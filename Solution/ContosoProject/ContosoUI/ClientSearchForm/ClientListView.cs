@@ -22,13 +22,13 @@ namespace ContosoUI.ClientSearchForm
         public ClientListView()
         {
             InitializeComponent();
-            presenter = new ClientSearchPresenter(this);
+            presenter = new ClientSearchPresenter(this, new ClientSearchModel());
         }
 
         private void ShowDependentOnRole(Role role)
         {
-            //if (!role.Permissions.Where(x => x.Title == "Search Client By City").Any())
-            //    clientCityTextEdit.Enabled = false;
+            if (!role.Permissions.Any(x => x.Title == "Search Client by City"))
+                clientCityTextEdit.Enabled = false;
         }
 
         private void ClientListView_Load(object sender, EventArgs e)

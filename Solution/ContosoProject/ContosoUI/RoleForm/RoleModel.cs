@@ -16,12 +16,12 @@ namespace ContosoUI.RoleForm
         private ProjectContext context = new ProjectContext();
 
         public readonly IRoleRepository RoleRepository;
-        public readonly DummyDAOForPermission PermissionRepository;
+        public readonly IPermissionRepository PermissionRepository;
 
         public RoleModel()
         {
             RoleRepository = new EFRoleDAO(context);
-            PermissionRepository = new DummyDAOForPermission();
+            PermissionRepository = new EFPermissionDAO(context);
         }
 
         public void Save(Role currentRole)

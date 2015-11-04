@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoleView));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barSaveButton = new DevExpress.XtraBars.BarButtonItem();
@@ -40,7 +39,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.roleLayoutControl = new DevExpress.XtraLayout.LayoutControl();
             this.roleGridControl = new DevExpress.XtraGrid.GridControl();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roleBindingSource = new System.Windows.Forms.BindingSource();
             this.roleGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTitle = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPermissions = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -84,7 +83,6 @@
             this.ribbon.Size = new System.Drawing.Size(1050, 122);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // barSaveButton
             // 

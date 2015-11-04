@@ -25,12 +25,7 @@ namespace ContosoUI.RoleForm
             _presenter = new RolePresenter(this, new RoleModel());
         }
 
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RoleView_Load(object sender, EventArgs e)
+       private void RoleView_Load(object sender, EventArgs e)
         {
             binding.DataSource = _presenter;
 
@@ -63,11 +58,7 @@ namespace ContosoUI.RoleForm
             }
         }
 
-        private void permissionsCheckedListBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+     
         private void barSaveButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             _presenter.Save();
