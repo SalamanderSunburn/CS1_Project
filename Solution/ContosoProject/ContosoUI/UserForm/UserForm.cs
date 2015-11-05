@@ -96,7 +96,7 @@ namespace ContosoUI.UserForm
         {
             if (!string.IsNullOrWhiteSpace(newCommentTextBox.Text))
             {
-                _presenter.Comments.Add(new Comment() {Author = null, EntityType = EntityType.User, Text = newCommentTextBox.Text});
+                _presenter.Comments.Add(new Comment() {Author = Program.AuthUser, EntityType = EntityType.User, Text = newCommentTextBox.Text});
                 newCommentTextBox.Text = string.Empty;
             }
         }
@@ -118,6 +118,7 @@ namespace ContosoUI.UserForm
         private void barNewButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             _presenter.New();
+            SetStateButtonState();
         }
 
         private void roleLookUpEdit_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)

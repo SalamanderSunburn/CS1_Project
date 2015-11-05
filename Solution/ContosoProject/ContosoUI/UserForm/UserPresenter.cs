@@ -206,6 +206,7 @@ namespace ContosoUI.UserForm
 
         public void New()
         {
+            _user = new User();
             Login = "";
             Password = "";
             FirstName = "";
@@ -215,6 +216,7 @@ namespace ContosoUI.UserForm
             Role = new Role( );
             Permissions = new BindingList<Permission>();
             Comments = new BindingList<Comment>();
+            
         }
     }
 }

@@ -29,13 +29,12 @@ namespace ContosoUI.RoleForm
         {
             binding.DataSource = _presenter;
 
-            roleGridControl.DataBindings.Add("DataSource", binding, "AvalaibleRoles");
+            roleGridControl.DataBindings.Add("DataSource", binding, "Roles");
 
         }
 
         private void roleGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-
             permissionsCheckedListBox.DataBindings.Clear();
             GridView view = (GridView) sender;
             GridHitInfo info = view.CalcHitInfo(view.GridControl.PointToClient(Control.MousePosition));
@@ -52,9 +51,9 @@ namespace ContosoUI.RoleForm
         private void FillThePermissionsList()
         {
             permissionsCheckedListBox.Items.Clear();
-            foreach (var permission in _presenter.CheckedPermissions)
+            foreach (var permission in _presenter.AvalaiblePermissions)
             {
-                permissionsCheckedListBox.Items.Add(permission.Key, permission.Value);
+                permissionsCheckedListBox.Items.Add(permission,_presenter.CurrentRole.Permissions.Contains(permission));
             }
         }
 
@@ -76,7 +75,7 @@ namespace ContosoUI.RoleForm
 
         private void permissionsCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (_presenter.Role == null) return;
+            if (_presenter.CurrentRole == null) return;
             var checkedPermission = permissionsCheckedListBox.SelectedItem as Permission;
             if (checkedPermission != null)
             {
