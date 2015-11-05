@@ -14,14 +14,14 @@ namespace ContosoUI.RoleForm
     {
         private RoleModel _model;
         private IRoleView _view;
-        private BindingList<Permission> _avalaiblePermissions = new BindingList<Permission>();
-        private BindingList<Role> _avalaibleRoles = new BindingList<Role>();
+        private List<Permission> _avalaiblePermissions = new List<Permission>();
 
         private Role _role;
         private BindingList<Permission> _currentRolePermissions = new BindingList<Permission>();
         private List<KeyValuePair<Permission, bool>> _checkedPermissions = new List<KeyValuePair<Permission, bool>>();
-
-        Dictionary<Role, List<Permission>> _changedRoles = new Dictionary<Role, List<Permission>>();
+        
+        private BindingList<Role> _avalaibleRoles = new BindingList<Role>();
+        List<Role> _changedRoles = new List<Role>(); 
 
         public RolePresenter(IRoleView view, RoleModel model)
         {
@@ -33,7 +33,7 @@ namespace ContosoUI.RoleForm
         private void InitializeFields()
         {
             _avalaibleRoles = new BindingList<Role>(_model.RoleRepository.GetAll().ToList());
-            _avalaiblePermissions = new BindingList<Permission>(_model.PermissionRepository.GetAll().ToList());
+            _avalaiblePermissions = new List<Permission>(_model.PermissionRepository.GetAll().ToList());
         }
 
         public void UsePermissionWithRoleID(int id)
@@ -50,25 +50,19 @@ namespace ContosoUI.RoleForm
              }
         }
 
-        public void ChangedRolePermission(Permission permission, bool state)
+        public void ChangedRole(Role role)
         {
-             if (!_changedRoles.Any(x => x.Key.Equals(_role)))
+            if (_changedRoles.FirstOrDefault(x => x.Equals(role)) == null)
             {
-                _changedRoles.Add(_role, _role.Permissions.ToList());
-            }
-
-            if (_changedRoles[_role].Any(x=>x.Title==permission.Title))
-            {
-                _changedRoles[_role].Remove(_changedRoles[_role].First(x => x.Title == permission.Title));
+                _changedRoles.Add(role);
             }
             else
             {
-                _changedRoles[_role].Add(permission);
+                _changedRoles[_changedRoles.FindIndex(x => x.Id.Equals(role.Id))] = role;
             }
-        
-       }
+        }
 
-        public Role Role
+    public Role Role
         {
             get { return _role; }
             set { _role = value; }
@@ -99,19 +93,17 @@ namespace ContosoUI.RoleForm
             }
         }
 
-        public BindingList<Permission> AvalaiblePermissions
+        public List<Permission> AvalaiblePermissions
         {
             get { return _avalaiblePermissions; }
         }
 
         public void Save()
         {
-            foreach (var kvp in _changedRoles)
+            foreach (var role in _changedRoles)
             {
-                kvp.Key.Permissions = kvp.Value;
-                _model.RoleRepository.Save(kvp.Key);
+                _model.RoleRepository.Save(role);
             }
-            _avalaibleRoles.ForEach(x=>_model.Save(x));
         }
 
         public void SaveAndNew()

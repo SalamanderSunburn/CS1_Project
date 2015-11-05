@@ -11,17 +11,16 @@ using Domain.Entities.Users;
 
 namespace ContosoUI.RoleForm
 {
-    internal class RoleModel
+    internal class RoleModel:Model
     {
-        private ProjectContext context = new ProjectContext();
-
         public readonly IRoleRepository RoleRepository;
         public readonly IPermissionRepository PermissionRepository;
 
         public RoleModel()
+            :base()
         {
-            RoleRepository = new EFRoleDAO(context);
-            PermissionRepository = new EFPermissionDAO(context);
+            RoleRepository = Facade.RoleRepository;
+            PermissionRepository = Facade.PermissionRepository;
         }
 
         public void Save(Role currentRole)
