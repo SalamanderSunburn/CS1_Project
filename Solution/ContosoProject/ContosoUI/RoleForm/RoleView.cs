@@ -28,11 +28,14 @@ namespace ContosoUI.RoleForm
        private void RoleView_Load(object sender, EventArgs e)
         {
             binding.DataSource = _presenter;
+
             roleGridControl.DataBindings.Add("DataSource", binding, "AvalaibleRoles");
+
         }
 
         private void roleGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+
             permissionsCheckedListBox.DataBindings.Clear();
             GridView view = (GridView) sender;
             GridHitInfo info = view.CalcHitInfo(view.GridControl.PointToClient(Control.MousePosition));
@@ -42,7 +45,7 @@ namespace ContosoUI.RoleForm
                 int id = (int) view.GetRowCellValue(info.RowHandle, "Id");
                 _presenter.UsePermissionWithRoleID(id);
                 FillThePermissionsList();
-                permissionsCheckedListBox.ItemCheck += permissionsCheckedListBox_ItemCheck;
+
             }
         }
 
@@ -54,7 +57,8 @@ namespace ContosoUI.RoleForm
                 permissionsCheckedListBox.Items.Add(permission.Key, permission.Value);
             }
         }
-        
+
+     
         private void barSaveButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             _presenter.Save();
@@ -72,20 +76,12 @@ namespace ContosoUI.RoleForm
 
         private void permissionsCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+            if (_presenter.Role == null) return;
             var checkedPermission = permissionsCheckedListBox.SelectedItem as Permission;
-            if (checkedPermission == null) return;
-           if (e.NewValue == CheckState.Checked)
-             {
-                if (_presenter.Role.Permissions.FirstOrDefault(x => x.Equals(checkedPermission)) == null)
-                    _presenter.Role.Permissions.Add(checkedPermission);
-            }
-            else
+            if (checkedPermission != null)
             {
-                if (_presenter.Role.Permissions.FirstOrDefault(x => x.Equals(checkedPermission)) != null)
-                    _presenter.Role.Permissions.Remove(checkedPermission);
+                _presenter.ChangedRolePermission(checkedPermission, e.NewValue == CheckState.Checked);
             }
-            _presenter.ChangedRole(_presenter.Role);
-
         }
     }
 }

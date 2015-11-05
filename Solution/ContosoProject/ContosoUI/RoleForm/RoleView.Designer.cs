@@ -214,6 +214,7 @@
             this.permissionsCheckedListBox.Name = "permissionsCheckedListBox";
             this.permissionsCheckedListBox.Size = new System.Drawing.Size(537, 260);
             this.permissionsCheckedListBox.TabIndex = 6;
+            this.permissionsCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.permissionsCheckedListBox_ItemCheck);
             // 
             // roleLayoutControlGroup
             // 
