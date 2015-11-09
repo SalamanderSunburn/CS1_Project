@@ -168,6 +168,7 @@
             this.usersGridView.GridControl = this.usersGridControl;
             this.usersGridView.Name = "usersGridView";
             this.usersGridView.OptionsBehavior.Editable = false;
+            this.usersGridView.OptionsView.ShowGroupPanel = false;
             this.usersGridView.DoubleClick += new System.EventHandler(this.usersGridView_DoubleClick);
             // 
             // loginGridColumn

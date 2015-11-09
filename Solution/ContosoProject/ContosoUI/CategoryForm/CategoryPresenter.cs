@@ -17,11 +17,10 @@ namespace ContosoUI.CategoryForm
 
         private readonly ICategoryRepository _categoryRepository;
 
-        private Category _categoryToSave = null;
-        private Category _selectedCategory = null;
+        private Category _selectedCategory = new Category(Domain.Entities.Comments.Comments.Init(Program.AuthUser, "Category"));
+        private BindingList<Comment> _comments = new BindingList<Comment>(); 
 
         private BindingList<Category> _categories;
-        private BindingList<Comment> _categoryComments = new BindingList<Comment>();
 
         public CategoryPresenter(ICategoryView view, CategoryModel model)
         {
@@ -31,17 +30,14 @@ namespace ContosoUI.CategoryForm
             _categories = new BindingList<Category>(_categoryRepository.GetAll().ToList());
         }
 
-        public void UseCategoryWithID(int id)
+        public void UseCategory(Category category)
         {
-            if(id != 0)
-                _selectedCategory = Categories.FirstOrDefault(categ=> categ.Id == id);
-            if(_selectedCategory!= null)
-                _categoryComments = new BindingList<Comment>(_selectedCategory.Comments.ToList());
+            _selectedCategory = category;
+            _comments = new BindingList<Comment>(_selectedCategory.Comments.ToList());
         }
 
         private void SaveCategory()
         {
-            SaveCategoryInUse();
             foreach (var category in _categories)
             {
                 if (category.Id != 0)
@@ -53,40 +49,6 @@ namespace ContosoUI.CategoryForm
                     _model.CategoryRepository.Create(category);
                 }
             }
-            /*if (_categoryRepository.GetAll().Count() < _categories.Count)
-            {
-                _categoryRepository.Create(_categoryToSave);
-            }
-            if (!_categoryRepository.GetAll().ToList().SequenceEqual(_categories))
-            {
-                foreach (var category in _categories)
-                {
-                    _categoryRepository.Save(category);
-                }
-            }*/
-        }
-
-        public void SaveCategoryInUse()
-        {
-            Category categoryToSave = _selectedCategory;
-            
-            if (_selectedCategory.Id == 0)
-            {
-                categoryToSave = new Category(_categoryComments)
-                {
-                    Date = _selectedCategory.Date,
-                    Id = _selectedCategory.Id,
-                    IsActive = _selectedCategory.IsActive,
-                    Title = _selectedCategory.Title
-                };
-            }
-            else
-            {
-                categoryToSave.Comments = _categoryComments;
-                
-            }
-            _categories[_categories.IndexOf(_categories.First(x => x.Title == categoryToSave.Title))] = categoryToSave;
-
         }
 
         public void Save()
@@ -96,11 +58,8 @@ namespace ContosoUI.CategoryForm
 
         public void AddCategoryWithTitle(string title)
         {
-            _categories.Add(_categoryToSave  = new Category(Domain.Entities.Comments.Comments.Init(Program.AuthUser, "Category")) { Title = title });
-            Categories = new BindingList<Category>(_categories);
-            if (Categories.Count < 2)
-                _selectedCategory = _categoryToSave;
-            SaveCategory();
+            _categories.Add(new Category(Domain.Entities.Comments.Comments.Init(Program.AuthUser, "Category")) { Title = title });
+            NotifyPropertyChanged("Categories");
         }
 
         public BindingList<Category> Categories
@@ -116,18 +75,25 @@ namespace ContosoUI.CategoryForm
 
         public BindingList<Comment> Comments
         {
-            get { return _categoryComments; }
+            get { return new BindingList<Comment>(_selectedCategory.Comments.ToList()); }
             set
             {
-                if (value.SequenceEqual(_categoryComments)) return;
-                _categoryComments = value;
+                if (value.SequenceEqual(_selectedCategory.Comments)) return;
+                _selectedCategory.Comments = value;
                 NotifyPropertyChanged();
             }
         }
-
+        
         public override void Stop()
         {
             _model.Dispose();
+        }
+
+
+        public void AddCommentToCurrentCategory(string comment)
+        {
+            _selectedCategory.Comments.Add(new Comment { Author = Program.AuthUser, EntityType = EntityType.Category, Text = comment });
+            NotifyPropertyChanged("Comments");
         }
     }
 }

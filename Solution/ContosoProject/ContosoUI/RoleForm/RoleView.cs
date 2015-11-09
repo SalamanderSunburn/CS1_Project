@@ -54,6 +54,8 @@ namespace ContosoUI.RoleForm
      
         private void barSaveButton_ItemClick(object sender, ItemClickEventArgs e)
         {
+            binding.EndEdit();
+            roleGridView.CloseEditor();
             _presenter.Save();
         }
 
@@ -83,8 +85,12 @@ namespace ContosoUI.RoleForm
         {
             permissionsCheckedListBox.DataBindings.Clear();
             GridView view = (GridView) sender;
-            int id = (int) view.GetRowCellValue(e.FocusedRowHandle, "Id");
-            _presenter.UsePermissionWithRoleID(id);
+            object roleObj = view.GetRow(e.FocusedRowHandle);
+            Role role = roleObj as Role;
+            if (role != null)
+            {
+                _presenter.UsePermissionWithRole(role);
+            }
             FillThePermissionsList();
         }
     }

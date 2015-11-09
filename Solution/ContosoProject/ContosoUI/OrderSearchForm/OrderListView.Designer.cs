@@ -193,6 +193,7 @@
             this.orderItemsGridView.GridControl = this.orderItemsGridControl;
             this.orderItemsGridView.Name = "orderItemsGridView";
             this.orderItemsGridView.OptionsBehavior.Editable = false;
+            this.orderItemsGridView.OptionsView.ShowGroupPanel = false;
             this.orderItemsGridView.DoubleClick += new System.EventHandler(this.orderItemsGridView_DoubleClick);
             // 
             // orderNumberGridColumn
