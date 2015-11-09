@@ -29,7 +29,7 @@ namespace ContosoUI.OrderForm
         private double _totalPrice;
         private int _id;
 
-        private bool _state;
+        private bool _state = true;
 
         private BindingList<Comment> _comments = new BindingList<Comment>();
         private BindingList<OrderItem> _orderItems = new BindingList<OrderItem>();
@@ -97,6 +97,7 @@ namespace ContosoUI.OrderForm
 
         public void New()
         {
+            _id = 0;
             _order = new Order(Domain.Entities.Comments.Comments.Init(Program.AuthUser, "Order"), new List<OrderItem>());
             _client = new Client() { ClientLocation = new Location(), Person = new Domain.Entities.Person() };
             _orderNumber = string.Empty;

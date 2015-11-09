@@ -75,12 +75,12 @@ namespace ContosoUI.ClientSearchForm
 
         public void Search()
         {
+            Clients.Clear();
             List<Client> clients;
-            if (City != null && FirstName != null && LastName != null)
-                clients = _clientRepository.FindBy(FirstName, LastName, City).ToList();
-            else
+            if (City == null && FirstName == null && LastName == null)
                 clients = _clientRepository.GetAll().ToList();
-
+            else
+                clients = _clientRepository.FindBy(FirstName, LastName, City).ToList();
             Clients = new BindingList<Client>(clients);
         }
 

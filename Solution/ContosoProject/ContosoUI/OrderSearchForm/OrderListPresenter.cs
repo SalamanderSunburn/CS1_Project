@@ -86,6 +86,7 @@ namespace ContosoUI.OrderSearchForm
 
         public void Search()
         {
+            OrdersList.Clear();
             List<Order> orders;
 
             if (string.IsNullOrEmpty(OrderNumber) && Client == null && StatusEnum == Status.All)

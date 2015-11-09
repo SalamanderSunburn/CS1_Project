@@ -88,11 +88,13 @@ namespace ContosoUI.ProductSearchForm
 
         public void Search()
         {
+            Products.Clear();
             List<Product> products;
-            if (SKU != null && Title != null && Category != null)
-                products = _productRepository.GetBy(SKU, Title, Category).ToList();
-            else
+            if (SKU == null && Title == null && Category == null)
                 products = _productRepository.GetAll().ToList();
+            else
+                products = _productRepository.GetBy(SKU, Title, Category).ToList();
+
 
             Products = new BindingList<Product>(products);
         }

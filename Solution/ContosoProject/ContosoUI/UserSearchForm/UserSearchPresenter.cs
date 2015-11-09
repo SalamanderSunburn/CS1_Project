@@ -86,11 +86,12 @@ namespace ContosoUI.UserSearchForm
 
         public void Search()
         {
+            Users.Clear();
             List<User> users; 
-            if (Login != null && FirstName != null && LastName != null)
-                users = _userRepository.GetBy(Login, FirstName, LastName).ToList();
-            else
+            if (Login == null && FirstName == null && LastName == null)
                 users = _userRepository.GetAll().ToList();
+            else
+                users = _userRepository.GetBy(Login, FirstName, LastName).ToList();     
 
             Users = new BindingList<User>(users);
         }

@@ -378,11 +378,11 @@ namespace ContosoUI.ProductForm
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.productPriceSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.productPriceSpinEdit.Properties.Mask.EditMask = "n2";
-            this.productPriceSpinEdit.Properties.MinValue = new decimal(new int[] {
-            1,
+            this.productPriceSpinEdit.Properties.MaxValue = new decimal(new int[] {
+            2147483647,
             0,
             0,
-            -2147483648});
+            0});
             this.productPriceSpinEdit.Size = new System.Drawing.Size(247, 20);
             this.productPriceSpinEdit.StyleController = this.entireLayoutControl;
             this.productPriceSpinEdit.TabIndex = 6;
