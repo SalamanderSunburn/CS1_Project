@@ -178,13 +178,12 @@ namespace ContosoUI.OrderForm
             if (e.Column == colQuantity || e.Column == colProduct)
             {
                 var product = (view.GetRowCellValue(e.RowHandle, "Product") as Product);
-                int quantity = (int)view.GetRowCellValue(e.RowHandle, "Quantity");
                 if (product != null)
-                {
-                    _presenter.OrderItems.Remove(_presenter.OrderItems.FirstOrDefault(x => x.Product.Title == product.Title));
-                    _presenter.OrderItems.Add(new OrderItem(product, quantity, product.Price));                    
+                {                   
                     _presenter.OrderItemsComparer();
-                    _presenter.TotalPrice = _presenter.OrderItems.Sum(x => x.Price * x.Quantity);
+                    repositoryQuantitySpinEdit.MinValue = 0;
+                    repositoryQuantitySpinEdit.MaxValue = int.MaxValue;
+                    totalPriceTextEdit.Text = _presenter.TotalPrice.ToString();
                 }
             }
         }

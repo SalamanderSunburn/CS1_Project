@@ -115,19 +115,6 @@ namespace ContosoUI.OrderForm
             New();
         }
 
-        public bool State
-        {
-            get { return _state; }
-            set
-            {
-                if (!Equals(value, _state))
-                {
-                    _state = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
-
         public void UseOrderWithID(int id)
         {
             _order = _model.GetByID(id);
@@ -150,6 +137,19 @@ namespace ContosoUI.OrderForm
         #endregion
 
         #region Properties
+        public bool State
+        {
+            get { return _state; }
+            set
+            {
+                if (!Equals(value, _state))
+                {
+                    _state = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public string OrderNumber
         {
             get { return _orderNumber; }
@@ -207,13 +207,7 @@ namespace ContosoUI.OrderForm
 
         public double TotalPrice
         {
-            get { return _totalPrice; }
-            set
-            {
-                if (Equals(value, _totalPrice)) return;
-                _totalPrice = value;
-                NotifyPropertyChanged();
-            }
+            get { return _orderItems.Sum(x => x.Product.Price  * x.Quantity); }
         }
 
 
