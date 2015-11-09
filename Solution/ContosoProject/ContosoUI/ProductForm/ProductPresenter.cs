@@ -90,7 +90,7 @@ namespace ContosoUI.ProductForm
 
         private void SaveProduct()
         {
-            if (_product.Id != 0)
+            if (_id != 0)
             {
                 _product.Comments = _productComments;
                 _product.Category = _category;
@@ -129,11 +129,12 @@ namespace ContosoUI.ProductForm
 
         public void New()
         {
+            _id = 0;
             SKU = null;
             Title = null;
             Quantity = 0;
             Price = 0;
-            ProductComments = new BindingList<Comment>();
+            ProductComments = new BindingList<Comment>(Comments.Init(Program.AuthUser, "Product"));
             SearchTitleCategory = string.Empty;
         }
 

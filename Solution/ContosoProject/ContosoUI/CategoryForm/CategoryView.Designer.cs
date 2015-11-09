@@ -164,6 +164,7 @@
             this.newCategoryTextEdit.Size = new System.Drawing.Size(167, 20);
             this.newCategoryTextEdit.StyleController = this.newCategoryLayoutControl;
             this.newCategoryTextEdit.TabIndex = 7;
+            this.newCategoryTextEdit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newCategoryTextEdit_KeyPress);
             // 
             // layoutControlGroupNewCategory
             // 

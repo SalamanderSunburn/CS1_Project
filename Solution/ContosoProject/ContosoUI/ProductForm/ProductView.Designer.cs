@@ -52,10 +52,10 @@ namespace ContosoUI.ProductForm
             this.addCommentButton = new DevExpress.XtraEditors.SimpleButton();
             this.productCommentsListBoxControl = new DevExpress.XtraEditors.ListBoxControl();
             this.productQuantitySpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.productPriceTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.productTitleTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.productSKUTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.categorySearchControl = new DevExpress.XtraEditors.TextEdit();
+            this.productPriceSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.layoutControlProductCategoryGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlProductGroup = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlProductGroup = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -87,10 +87,10 @@ namespace ContosoUI.ProductForm
             ((System.ComponentModel.ISupportInitialize)(this.categoryGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productCommentsListBoxControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productQuantitySpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productPriceTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productTitleTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productSKUTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorySearchControl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPriceSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlProductCategoryGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlProductGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlProductGroup)).BeginInit();
@@ -218,10 +218,10 @@ namespace ContosoUI.ProductForm
             this.entireLayoutControl.Controls.Add(this.addCommentButton);
             this.entireLayoutControl.Controls.Add(this.productCommentsListBoxControl);
             this.entireLayoutControl.Controls.Add(this.productQuantitySpinEdit);
-            this.entireLayoutControl.Controls.Add(this.productPriceTextEdit);
             this.entireLayoutControl.Controls.Add(this.productTitleTextEdit);
             this.entireLayoutControl.Controls.Add(this.productSKUTextEdit);
             this.entireLayoutControl.Controls.Add(this.categorySearchControl);
+            this.entireLayoutControl.Controls.Add(this.productPriceSpinEdit);
             this.entireLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.entireLayoutControl.Location = new System.Drawing.Point(0, 122);
             this.entireLayoutControl.Name = "entireLayoutControl";
@@ -331,17 +331,6 @@ namespace ContosoUI.ProductForm
             this.productQuantitySpinEdit.StyleController = this.entireLayoutControl;
             this.productQuantitySpinEdit.TabIndex = 8;
             // 
-            // productPriceTextEdit
-            // 
-            this.productPriceTextEdit.Location = new System.Drawing.Point(29, 217);
-            this.productPriceTextEdit.MenuManager = this.ribbon;
-            this.productPriceTextEdit.Name = "productPriceTextEdit";
-            this.productPriceTextEdit.Properties.Mask.EditMask = "n2";
-            this.productPriceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.productPriceTextEdit.Size = new System.Drawing.Size(247, 20);
-            this.productPriceTextEdit.StyleController = this.entireLayoutControl;
-            this.productPriceTextEdit.TabIndex = 6;
-            // 
             // productTitleTextEdit
             // 
             this.productTitleTextEdit.Location = new System.Drawing.Point(29, 117);
@@ -374,6 +363,29 @@ namespace ContosoUI.ProductForm
             this.categorySearchControl.StyleController = this.entireLayoutControl;
             this.categorySearchControl.TabIndex = 23;
             this.categorySearchControl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.categorySearchControl_KeyPress);
+            // 
+            // productPriceSpinEdit
+            // 
+            this.productPriceSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.productPriceSpinEdit.Location = new System.Drawing.Point(29, 217);
+            this.productPriceSpinEdit.MenuManager = this.ribbon;
+            this.productPriceSpinEdit.Name = "productPriceSpinEdit";
+            this.productPriceSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.productPriceSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.productPriceSpinEdit.Properties.Mask.EditMask = "n2";
+            this.productPriceSpinEdit.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.productPriceSpinEdit.Size = new System.Drawing.Size(247, 20);
+            this.productPriceSpinEdit.StyleController = this.entireLayoutControl;
+            this.productPriceSpinEdit.TabIndex = 6;
             // 
             // layoutControlProductCategoryGroup
             // 
@@ -414,7 +426,7 @@ namespace ContosoUI.ProductForm
             // 
             // layoutControlProductPriceTextEdit
             // 
-            this.layoutControlProductPriceTextEdit.Control = this.productPriceTextEdit;
+            this.layoutControlProductPriceTextEdit.Control = this.productPriceSpinEdit;
             this.layoutControlProductPriceTextEdit.Location = new System.Drawing.Point(0, 150);
             this.layoutControlProductPriceTextEdit.Name = "layoutControlProductPriceTextEdit";
             this.layoutControlProductPriceTextEdit.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
@@ -628,10 +640,10 @@ namespace ContosoUI.ProductForm
             ((System.ComponentModel.ISupportInitialize)(this.categoryGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productCommentsListBoxControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productQuantitySpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productPriceTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productTitleTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productSKUTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorySearchControl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPriceSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlProductCategoryGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlProductGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlProductGroup)).EndInit();
@@ -669,7 +681,6 @@ namespace ContosoUI.ProductForm
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlProductCategoryGroup;
         private DevExpress.XtraEditors.ListBoxControl productCommentsListBoxControl;
         private DevExpress.XtraEditors.SpinEdit productQuantitySpinEdit;
-        private DevExpress.XtraEditors.TextEdit productPriceTextEdit;
         private DevExpress.XtraEditors.ListBoxControl categoryCommentsListBoxControl;
         private DevExpress.XtraGrid.GridControl categoryGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView categoryGridView;
@@ -707,5 +718,6 @@ namespace ContosoUI.ProductForm
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private DevExpress.XtraEditors.TextEdit productCategoryTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlProductCategory;
+        private DevExpress.XtraEditors.SpinEdit productPriceSpinEdit;
     }
 }

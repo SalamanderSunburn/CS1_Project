@@ -101,5 +101,13 @@ namespace ContosoUI.CategoryForm
         {
             presenter.Stop();
         }
+
+        private void newCategoryTextEdit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                addNewCategorySimpleButton_Click(this, e);
+            }
+        }
     }
 }

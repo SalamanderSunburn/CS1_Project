@@ -275,7 +275,7 @@ namespace ContosoUI.UserForm
             this.roleLookUpEdit.Properties.DisplayMember = "Title";
             this.roleLookUpEdit.Properties.NullText = "";
             this.roleLookUpEdit.Properties.PopupSizeable = false;
-            this.roleLookUpEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.roleLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.roleLookUpEdit.Properties.ValueMember = "Title";
             this.roleLookUpEdit.Size = new System.Drawing.Size(465, 20);
             this.roleLookUpEdit.StyleController = this.layoutControl;

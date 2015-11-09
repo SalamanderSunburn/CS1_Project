@@ -183,7 +183,6 @@ namespace ContosoUI.OrderForm
                 {
                     _presenter.OrderItems.Remove(_presenter.OrderItems.FirstOrDefault(x => x.Product.Title == product.Title));
                     _presenter.OrderItems.Add(new OrderItem(product, quantity, product.Price));                    
-                    repositoryQuantitySpinEdit.MaxValue = product.Quantity;
                     _presenter.OrderItemsComparer();
                     _presenter.TotalPrice = _presenter.OrderItems.Sum(x => x.Price * x.Quantity);
                 }
