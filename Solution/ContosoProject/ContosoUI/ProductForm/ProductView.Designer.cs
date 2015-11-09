@@ -267,6 +267,7 @@ namespace ContosoUI.ProductForm
             this.categoryGridView.GridControl = this.categoryGridControl;
             this.categoryGridView.Name = "categoryGridView";
             this.categoryGridView.OptionsBehavior.Editable = false;
+            this.categoryGridView.OptionsView.ShowGroupPanel = false;
             this.categoryGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.categoryGridView_RowClick);
             this.categoryGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.categoryGridView_FocusedRowChanged);
             // 
