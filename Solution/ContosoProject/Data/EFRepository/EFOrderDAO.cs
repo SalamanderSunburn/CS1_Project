@@ -111,7 +111,8 @@ namespace Data.EFRepository
             if (client != null)
                 result = result.Where(order => order.Client.Id == client.Id);
 
-            return result.Include(ord => ord.OrderItems).Where(order => order.Status == status).ToList();
+            return status == Status.All ? result.Include(ord => ord.OrderItems).Where(order => order.Status != status).ToList()
+                : result.Include(ord => ord.OrderItems).Where(order => order.Status == status).ToList();
         }
         /// <summary>
         /// 

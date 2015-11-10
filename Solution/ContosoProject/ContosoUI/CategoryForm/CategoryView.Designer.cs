@@ -54,10 +54,10 @@
             this.dateColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.activityCollumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroupCategories = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlCategoryGridControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlCommentsListBox = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlAddNewCommentTextEdit = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlAddNewCommentButton = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlCategoryGridControl = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCategoryPopupControlContainer)).BeginInit();
             this.newCategoryPopupControlContainer.SuspendLayout();
@@ -74,10 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoryGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupCategories)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCategoryGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentsListBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAddNewCommentTextEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAddNewCommentButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCategoryGridControl)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -122,6 +122,7 @@
             this.addCategoryBarButton.Id = 5;
             this.addCategoryBarButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("addCategoryBarButton.LargeGlyph")));
             this.addCategoryBarButton.Name = "addCategoryBarButton";
+            this.addCategoryBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.addCategoryBarButton_ItemClick);
             // 
             // newCategoryPopupControlContainer
             // 
@@ -164,6 +165,7 @@
             this.newCategoryTextEdit.Size = new System.Drawing.Size(167, 20);
             this.newCategoryTextEdit.StyleController = this.newCategoryLayoutControl;
             this.newCategoryTextEdit.TabIndex = 7;
+            this.newCategoryTextEdit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newCategoryTextEdit_KeyPress);
             // 
             // layoutControlGroupNewCategory
             // 
@@ -290,6 +292,7 @@
             this.activityCollumn});
             this.categoryGridView.GridControl = this.categoryGridControl;
             this.categoryGridView.Name = "categoryGridView";
+            this.categoryGridView.OptionsView.ShowGroupPanel = false;
             this.categoryGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.categoryGridView_FocusedRowChanged);
             // 
             // titleColumn
@@ -330,17 +333,6 @@
             this.layoutControlGroupCategories.Size = new System.Drawing.Size(1014, 614);
             this.layoutControlGroupCategories.TextVisible = false;
             // 
-            // layoutControlCategoryGridControl
-            // 
-            this.layoutControlCategoryGridControl.Control = this.categoryGridControl;
-            this.layoutControlCategoryGridControl.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlCategoryGridControl.Name = "layoutControlCategoryGridControl";
-            this.layoutControlCategoryGridControl.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
-            this.layoutControlCategoryGridControl.Size = new System.Drawing.Size(994, 382);
-            this.layoutControlCategoryGridControl.Spacing = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlCategoryGridControl.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlCategoryGridControl.TextVisible = false;
-            // 
             // layoutControlCommentsListBox
             // 
             this.layoutControlCommentsListBox.Control = this.categoryCommentsListBoxControl;
@@ -375,6 +367,17 @@
             this.layoutControlAddNewCommentButton.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlAddNewCommentButton.TextVisible = false;
             // 
+            // layoutControlCategoryGridControl
+            // 
+            this.layoutControlCategoryGridControl.Control = this.categoryGridControl;
+            this.layoutControlCategoryGridControl.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlCategoryGridControl.Name = "layoutControlCategoryGridControl";
+            this.layoutControlCategoryGridControl.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlCategoryGridControl.Size = new System.Drawing.Size(994, 382);
+            this.layoutControlCategoryGridControl.Spacing = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
+            this.layoutControlCategoryGridControl.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlCategoryGridControl.TextVisible = false;
+            // 
             // CategoryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,10 +409,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoryGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupCategories)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCategoryGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlCommentsListBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAddNewCommentTextEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAddNewCommentButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlCategoryGridControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,7 +428,6 @@
         private DevExpress.XtraGrid.GridControl categoryGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView categoryGridView;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroupCategories;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlCategoryGridControl;
         private DevExpress.XtraEditors.ListBoxControl categoryCommentsListBoxControl;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlCommentsListBox;
         private DevExpress.XtraBars.BarButtonItem saveBarButton;
@@ -445,5 +447,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn titleColumn;
         private DevExpress.XtraGrid.Columns.GridColumn dateColumn;
         private DevExpress.XtraGrid.Columns.GridColumn activityCollumn;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlCategoryGridControl;
     }
 }

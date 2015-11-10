@@ -21,7 +21,7 @@ namespace ContosoUI.UserForm
             _model = model;
             _roleRepository = _model.RoleRepository;
             _userRepository = _model.UserRepository;
-            var roles = _roleRepository.GetAll();
+            var roles = _roleRepository.GetByIsActive(true);
             RoleList = new List<Role>(roles);            
         }
 

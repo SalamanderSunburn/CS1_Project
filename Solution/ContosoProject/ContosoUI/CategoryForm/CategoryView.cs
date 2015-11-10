@@ -63,8 +63,8 @@ namespace ContosoUI.CategoryForm
         {
             if (!string.IsNullOrEmpty(addNewCommentTextEdit.Text))
             {
-                presenter.Comments.Add(new Comment { Author = Program.AuthUser, EntityType = EntityType.Category, Text = addNewCommentTextEdit.Text });
-                //presenter.Save();
+                presenter.AddCommentToCurrentCategory(addNewCommentTextEdit.Text);
+                //presenter.Comments.Add(new Comment { Author = Program.AuthUser, EntityType = EntityType.Category, Text = addNewCommentTextEdit.Text });
                 addNewCommentTextEdit.Text = string.Empty;
             }
         }
@@ -91,15 +91,32 @@ namespace ContosoUI.CategoryForm
         {
             categoryCommentsListBoxControl.DataBindings.Clear();
             GridView view = (GridView)sender;
-
-            int id = (int)view.GetRowCellValue(e.FocusedRowHandle, "Id");
-            presenter.UseCategoryWithID(id);
+            object categoryObj = view.GetRow(e.FocusedRowHandle);
+            Category category = categoryObj as Category;
+            if (category != null)
+            {
+                presenter.UseCategory(category);
+            }
             categoryCommentsListBoxControl.DataBindings.Add("DataSource", binding, "Comments", false, DataSourceUpdateMode.OnPropertyChanged);
+
         }
 
         private void CategoryView_FormClosed(object sender, FormClosedEventArgs e)
         {
             presenter.Stop();
+        }
+
+        private void newCategoryTextEdit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char) Keys.Enter == e.KeyChar)
+            {
+                addNewCategorySimpleButton_Click(sender, e);
+            }
+        }
+
+        private void addCategoryBarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            newCategoryTextEdit.Focus();
         }
     }
 }

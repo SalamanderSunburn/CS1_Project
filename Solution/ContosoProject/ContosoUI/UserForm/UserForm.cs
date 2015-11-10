@@ -120,5 +120,10 @@ namespace ContosoUI.UserForm
         {
             _presenter.Stop();
         }
+
+        private void roleLookUpEdit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

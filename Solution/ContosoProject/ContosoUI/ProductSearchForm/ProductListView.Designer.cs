@@ -182,6 +182,7 @@
             this.productsGridView.GridControl = this.productsGridControl;
             this.productsGridView.Name = "productsGridView";
             this.productsGridView.OptionsBehavior.Editable = false;
+            this.productsGridView.OptionsView.ShowGroupPanel = false;
             this.productsGridView.DoubleClick += new System.EventHandler(this.productsGridView_DoubleClick);
             // 
             // skuGridColumn
@@ -190,7 +191,7 @@
             this.skuGridColumn.FieldName = "SKU";
             this.skuGridColumn.Name = "skuGridColumn";
             this.skuGridColumn.Visible = true;
-            this.skuGridColumn.VisibleIndex = 1;
+            this.skuGridColumn.VisibleIndex = 0;
             // 
             // titleGridColumn
             // 
@@ -198,7 +199,7 @@
             this.titleGridColumn.FieldName = "Title";
             this.titleGridColumn.Name = "titleGridColumn";
             this.titleGridColumn.Visible = true;
-            this.titleGridColumn.VisibleIndex = 0;
+            this.titleGridColumn.VisibleIndex = 1;
             // 
             // categoryGridColumn
             // 

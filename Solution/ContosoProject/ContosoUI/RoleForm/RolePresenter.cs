@@ -34,9 +34,9 @@ namespace ContosoUI.RoleForm
             _avalaiblePermissions = new BindingList<Permission>(_model.PermissionRepository.GetAll().ToList());
         }
 
-        public void UsePermissionWithRoleID(int id)
+        public void UsePermissionWithRole(Role role)
         {
-            _currentRole = _roles.First(x => x.Id == id);//.Clone() as Role;
+            _currentRole = role;
         }
 
         public void ChangedRolePermission(Permission permission, bool state)
@@ -64,6 +64,11 @@ namespace ContosoUI.RoleForm
                 if (string.IsNullOrEmpty(role.Title))
                 {
                     MessageBox.Show("You unable to save role with empty title!", "Warning");
+                    return;
+                }
+                if(_roles.Any(x=>x.Title == role.Title && !x.Equals(role)))
+                {
+                    MessageBox.Show("You unable to add role with the same title!", "Warning");
                     return;
                 }
                 if (role.Id == 0)

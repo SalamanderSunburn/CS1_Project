@@ -289,6 +289,7 @@
             this.сlientOrderGridView.GridControl = this.сlientOrdersGridControl;
             this.сlientOrderGridView.Name = "сlientOrderGridView";
             this.сlientOrderGridView.OptionsBehavior.AutoExpandAllGroups = true;
+            this.сlientOrderGridView.OptionsView.ShowGroupPanel = false;
             // 
             // orderNumberColumn
             // 
