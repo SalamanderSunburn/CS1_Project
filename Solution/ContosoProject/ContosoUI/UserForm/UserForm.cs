@@ -60,6 +60,7 @@ namespace ContosoUI.UserForm
             middleNameTextEdit.DataBindings.Add("EditValue", binding, "MiddleName");
             lastNameTextEdit.DataBindings.Add("EditValue", binding, "LastName");
             passwordTextEdit.DataBindings.Add("EditValue", binding, "Password");
+            passwordTextEdit.Text = "";
             roleLookUpEdit.DataBindings.Add("EditValue", binding, "RoleID");
             permissionListBoxControl.DataBindings.Add("DataSource", binding, "Permissions");
             SetStateButtonState();
@@ -90,6 +91,7 @@ namespace ContosoUI.UserForm
         {
             binding.EndEdit();
             _presenter.Save();
+            passwordTextEdit.Text = "";
         }
 
         private void barSaveAndNewButton_ItemClick(object sender, ItemClickEventArgs e)
