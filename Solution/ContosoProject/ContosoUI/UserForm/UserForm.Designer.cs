@@ -282,6 +282,7 @@ namespace ContosoUI.UserForm
             this.roleLookUpEdit.TabIndex = 6;
             this.roleLookUpEdit.EditValueChanged += new System.EventHandler(this.roleLookUpEdit_EditValueChanged);
             this.roleLookUpEdit.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.roleLookUpEdit_EditValueChanging);
+            this.roleLookUpEdit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.roleLookUpEdit_KeyPress);
             // 
             // roleBindingSource
             // 

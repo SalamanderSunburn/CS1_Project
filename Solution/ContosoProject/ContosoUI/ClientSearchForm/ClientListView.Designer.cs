@@ -168,6 +168,7 @@
             this.clientsGridView.GridControl = this.clientsGridControl;
             this.clientsGridView.Name = "clientsGridView";
             this.clientsGridView.OptionsBehavior.Editable = false;
+            this.clientsGridView.OptionsView.ShowGroupPanel = false;
             this.clientsGridView.DoubleClick += new System.EventHandler(this.clientsGridView_DoubleClick);
             // 
             // lastNameGridColumn

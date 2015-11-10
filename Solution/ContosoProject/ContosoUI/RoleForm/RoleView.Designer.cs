@@ -198,6 +198,7 @@
             // 
             // permissionsCheckedListBox
             // 
+            this.permissionsCheckedListBox.CheckOnClick = true;
             this.permissionsCheckedListBox.FormattingEnabled = true;
             this.permissionsCheckedListBox.Location = new System.Drawing.Point(496, 33);
             this.permissionsCheckedListBox.Name = "permissionsCheckedListBox";
