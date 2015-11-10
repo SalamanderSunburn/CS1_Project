@@ -151,6 +151,7 @@
             this.orderStatusComboBoxEdit.Name = "orderStatusComboBoxEdit";
             this.orderStatusComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.orderStatusComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.orderStatusComboBoxEdit.Size = new System.Drawing.Size(317, 20);
             this.orderStatusComboBoxEdit.StyleController = this.layoutControlOrderView;
             this.orderStatusComboBoxEdit.TabIndex = 9;

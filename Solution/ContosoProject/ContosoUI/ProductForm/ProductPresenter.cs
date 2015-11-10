@@ -5,6 +5,7 @@ using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace ContosoUI.ProductForm
 {
@@ -90,7 +91,13 @@ namespace ContosoUI.ProductForm
 
         private void SaveProduct()
         {
-            if (_product.Id != 0)
+            if (string.IsNullOrWhiteSpace(Title)
+                && string.IsNullOrWhiteSpace(SKU))
+            {
+                return;
+            }
+
+            if (_id != 0)
             {
                 _product.Comments = _productComments;
                 _product.Category = _category;
@@ -129,11 +136,12 @@ namespace ContosoUI.ProductForm
 
         public void New()
         {
+            _id = 0;
             SKU = null;
             Title = null;
             Quantity = 0;
             Price = 0;
-            ProductComments = new BindingList<Comment>();
+            ProductComments = new BindingList<Comment>(Comments.Init(Program.AuthUser, "Product"));
             SearchTitleCategory = string.Empty;
         }
 

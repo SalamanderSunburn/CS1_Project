@@ -177,7 +177,7 @@
             this.lastNameGridColumn.FieldName = "Person.LastName";
             this.lastNameGridColumn.Name = "lastNameGridColumn";
             this.lastNameGridColumn.Visible = true;
-            this.lastNameGridColumn.VisibleIndex = 0;
+            this.lastNameGridColumn.VisibleIndex = 2;
             // 
             // firstNameGridColumn
             // 
@@ -185,7 +185,7 @@
             this.firstNameGridColumn.FieldName = "Person.FirstName";
             this.firstNameGridColumn.Name = "firstNameGridColumn";
             this.firstNameGridColumn.Visible = true;
-            this.firstNameGridColumn.VisibleIndex = 1;
+            this.firstNameGridColumn.VisibleIndex = 0;
             // 
             // middleNameGridColumn
             // 
@@ -193,7 +193,7 @@
             this.middleNameGridColumn.FieldName = "Person.MiddleName";
             this.middleNameGridColumn.Name = "middleNameGridColumn";
             this.middleNameGridColumn.Visible = true;
-            this.middleNameGridColumn.VisibleIndex = 2;
+            this.middleNameGridColumn.VisibleIndex = 1;
             // 
             // cityGridColumn
             // 

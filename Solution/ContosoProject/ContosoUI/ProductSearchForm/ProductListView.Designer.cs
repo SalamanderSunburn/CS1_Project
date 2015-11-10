@@ -191,7 +191,7 @@
             this.skuGridColumn.FieldName = "SKU";
             this.skuGridColumn.Name = "skuGridColumn";
             this.skuGridColumn.Visible = true;
-            this.skuGridColumn.VisibleIndex = 1;
+            this.skuGridColumn.VisibleIndex = 0;
             // 
             // titleGridColumn
             // 
@@ -199,7 +199,7 @@
             this.titleGridColumn.FieldName = "Title";
             this.titleGridColumn.Name = "titleGridColumn";
             this.titleGridColumn.Visible = true;
-            this.titleGridColumn.VisibleIndex = 0;
+            this.titleGridColumn.VisibleIndex = 1;
             // 
             // categoryGridColumn
             // 

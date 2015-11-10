@@ -33,6 +33,7 @@ namespace ContosoUI.ProductForm
 
         private void ProductAddView_Load(object sender, EventArgs e)
         {
+            //productPriceSpinEdit.Properties.MinValue = 0;
             BindControls();
             ShowDependentOnRole(Program.AuthUser.Role);
         }
@@ -44,7 +45,7 @@ namespace ContosoUI.ProductForm
             productSKUTextEdit.DataBindings.Add("EditValue", _binding, "SKU");
             productTitleTextEdit.DataBindings.Add("EditValue", _binding, "Title");
             productQuantitySpinEdit.DataBindings.Add("Value", _binding, "Quantity");
-            productPriceTextEdit.DataBindings.Add("EditValue", _binding, "Price");
+            productPriceSpinEdit.DataBindings.Add("EditValue", _binding, "Price");
 
             productCategoryTextEdit.DataBindings.Add("EditValue", _binding, "Category");
             categorySearchControl.DataBindings.Add("EditValue", _binding, "SearchTitleCategory");
@@ -131,7 +132,7 @@ namespace ContosoUI.ProductForm
 
         private bool IsControlsEmpty()
         {
-            return string.IsNullOrEmpty(productSKUTextEdit.Text) || string.IsNullOrEmpty(productTitleTextEdit.Text) || string.IsNullOrEmpty(productPriceTextEdit.Text) || productCategoryTextEdit.EditValue == null;
+            return string.IsNullOrEmpty(productSKUTextEdit.Text) || string.IsNullOrEmpty(productTitleTextEdit.Text) || string.IsNullOrEmpty(productPriceSpinEdit.Text) || productCategoryTextEdit.EditValue == null;
         }
 
         private void barSaveAndNewButton_ItemClick(object sender, ItemClickEventArgs e)

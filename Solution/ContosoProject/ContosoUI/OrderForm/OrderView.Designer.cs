@@ -311,6 +311,7 @@
             // 
             // orderGridControl
             // 
+            this.orderGridControl.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderItembindingSource, "Product", true));
             this.orderGridControl.DataSource = this.orderItembindingSource;
             this.orderGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderGridControl.Location = new System.Drawing.Point(0, 0);

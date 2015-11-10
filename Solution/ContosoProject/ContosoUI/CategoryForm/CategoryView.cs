@@ -29,8 +29,10 @@ namespace ContosoUI.CategoryForm
         private void CategoryView_Load(object sender, EventArgs e)
         {
             binding.DataSource = presenter;
-            categoryGridControl.DataBindings.Add("DataSource", binding, "Categories");
-            //categoryCommentsListBoxControl.DataBindings.Add("DataSource", binding, "Comments");
+
+            categoryGridControl.DataBindings.Add("DataSource", binding, "Categories", false, DataSourceUpdateMode.OnPropertyChanged);
+            //categoryCommentsListBoxControl.DataBindings.Add("DataSource", binding, "Comments", false, DataSourceUpdateMode.OnPropertyChanged);
+
             ShowDependentOnRole(Program.AuthUser.Role);
         }
 

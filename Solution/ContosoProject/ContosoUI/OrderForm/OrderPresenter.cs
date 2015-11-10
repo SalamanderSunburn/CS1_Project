@@ -29,7 +29,7 @@ namespace ContosoUI.OrderForm
         private double _totalPrice;
         private int _id;
 
-        private bool _state;
+        private bool _state = true;
 
         private BindingList<Comment> _comments = new BindingList<Comment>();
         private BindingList<OrderItem> _orderItems = new BindingList<OrderItem>();
@@ -97,6 +97,7 @@ namespace ContosoUI.OrderForm
 
         public void New()
         {
+            _id = 0;
             _order = new Order(Domain.Entities.Comments.Comments.Init(Program.AuthUser, "Order"), new List<OrderItem>());
             _client = new Client() { ClientLocation = new Location(), Person = new Domain.Entities.Person() };
             _orderNumber = string.Empty;
@@ -112,19 +113,6 @@ namespace ContosoUI.OrderForm
         {
             Save();
             New();
-        }
-
-        public bool State
-        {
-            get { return _state; }
-            set
-            {
-                if (!Equals(value, _state))
-                {
-                    _state = value;
-                    NotifyPropertyChanged();
-                }
-            }
         }
 
         public void UseOrderWithID(int id)
@@ -149,6 +137,19 @@ namespace ContosoUI.OrderForm
         #endregion
 
         #region Properties
+        public bool State
+        {
+            get { return _state; }
+            set
+            {
+                if (!Equals(value, _state))
+                {
+                    _state = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public string OrderNumber
         {
             get { return _orderNumber; }
@@ -206,13 +207,7 @@ namespace ContosoUI.OrderForm
 
         public double TotalPrice
         {
-            get { return _totalPrice; }
-            set
-            {
-                if (Equals(value, _totalPrice)) return;
-                _totalPrice = value;
-                NotifyPropertyChanged();
-            }
+            get { return _orderItems.Sum(x => x.Product.Price  * x.Quantity); }
         }
 
 

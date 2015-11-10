@@ -37,6 +37,7 @@ namespace ContosoUI.ClientForm
 
         public ClientPresenter(IClientView view, ClientModel model)
         {
+            State = true;
             _view = view;
             _model = model;
             _clientRepository = _model.ClientRepository;
