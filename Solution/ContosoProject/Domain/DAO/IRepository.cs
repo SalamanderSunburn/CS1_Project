@@ -1,20 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace Domain.DAO
 {
     public interface IRepository<T>
     {
         void Create(T entity);
-        void Save(T entity);
+        T Read(int id);
+        void Update(T entity);
         void Delete(T entity);
         void Delete(int id);
-        T Find(int id);
 
-        ICollection<T> GetAll();
-        ICollection<T> GetByIsActive(bool isActive);
+        IQueryable<T> GetAll();
+        IQueryable<T> GetByIsActive(bool isActive);
+        IQueryable<T> FindBy(Expression<Func<T, bool>> predicate);
     }
 }
